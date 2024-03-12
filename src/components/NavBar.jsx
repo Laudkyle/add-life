@@ -15,9 +15,10 @@ function NavBar() {
   </Nav>;
 }
 const Nav = styled.div`
-  width: 100%;
+  width: 96%;
   height: 100px;
   display: flex;
+  margin:auto;
   background: #5c0075;
 `;
 export default NavBar;
