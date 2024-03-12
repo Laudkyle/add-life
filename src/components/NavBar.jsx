@@ -1,24 +1,40 @@
 import React from "react";
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
-  return <Nav>
-    <NavLink to={'/'}>Home</NavLink>
-    <NavLink to={'/about'}>Cancer</NavLink>
-    <NavLink to={'/involved'}>Get Involved</NavLink>
-    <NavLink to={'/support'}>Lymphoma Support</NavLink>
-    <NavLink to={'/foundation'}>Our Foundation</NavLink>
-    <NavLink to={'/events'}>News & Events</NavLink>
-    <NavLink to={'/projects'}>Projects</NavLink>
-    <NavLink to={'/gallery'}>Gallery</NavLink>
-  </Nav>;
-}
-const Nav = styled.div`
-  width: 96%;
-  height: 100px;
-  display: flex;
-  margin:auto;
-  background: #5c0075;
-`;
+const NavBar = () => {
+  return (
+    <div className="w-full flex justify-center items-center">
+    <div className="w-[200px] my-2">
+      <h1 className="text-[#8E24AA] font-bold text-3xl">LoGo</h1>
+    </div>
+      <div className="flex p-4 justify-end items-center text-[#8E24AA] font-medium">
+        <NavLink to={"/"} className={"p-4"}>
+          Home
+        </NavLink>
+        <NavLink to={"/about"} className={"p-4"}>
+          Cancer
+        </NavLink>
+        <NavLink to={"/involved"} className={"p-4"}>
+          Get Involved
+        </NavLink>
+        <NavLink to={"/support"} className={"p-4"}>
+          Lymphoma Support
+        </NavLink>
+        <NavLink to={"/foundation"} className={"p-4"}>
+          Our Foundation
+        </NavLink>
+        <NavLink to={"/events"} className={"p-4"}>
+          News & Events
+        </NavLink>
+        <NavLink to={"/projects"} className={"p-4"}>
+          Projects
+        </NavLink>
+        <NavLink to={"/gallery"} className={"p-4"}>
+          Gallery
+        </NavLink>
+      </div>
+    </div>
+  );
+};
+
 export default NavBar;
