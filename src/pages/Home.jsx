@@ -34,7 +34,7 @@ useEffect(() => {
     }}>
         {data.map((item) => {
             <div key={item.id}>
-            <h4>a{"https://addlifetoyears.org/" + item.img}</h4>
+            <h4>{"https://addlifetoyears.org/" + item.img}</h4>
             </div>
         })}
     </Splide>
