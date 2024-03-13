@@ -9,7 +9,7 @@ const NavBar = () => {
     setNav(!nav);
   };
   return (
-    <div className="w-full flex justify-between items-center p-4">
+    <div className="w-full flex justify-between items-center h-[96px] bg-transparent p-4">
       <div className="w-[200px] my-2">
         <h1 className="text-[#8E24AA] font-bold text-3xl">LoGo</h1>
       </div>
