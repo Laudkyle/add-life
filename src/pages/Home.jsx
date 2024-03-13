@@ -25,19 +25,28 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Container>
-        {data.map((item) => (
-          <div key={item.key}>
-            <img src={"https://addlifetoyears.org/"+item.img} alt={item.img} />
-          </div>
-        ))}
-      </Container>
+      <div className="w-full h-screen mt-[-96px]">
+        <Splide
+          options={{
+            perPage: 1,
+            arrows: false,
+            pagination: false,
+            drag: "free",
+          }}
+        >
+          {data.map((item) => (
+            <SplideSlide key={item.key}>
+              <img
+                src={"https://addlifetoyears.org/" + item.img}
+                alt={item.img}
+                className="w-full h-full"
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </motion.div>
   );
 }
-
-const Container = styled.div`
-  width: 96%;
-`;
 
 export default Home;
