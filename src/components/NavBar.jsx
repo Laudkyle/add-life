@@ -48,7 +48,7 @@ const NavBar = () => {
         className={
           nav
             ? "fixed left-[-100%] ease-in-out duration-500"
-            : "fixed left-0 top-0 w-[250px] bg-white border-r border-r-green-900 h-screen ease-in-out duration-500"
+            : "fixed left-0 top-0 w-[250px] bg-white border-r border-r-[#8e24aa]-900 h-screen ease-in-out duration-500"
         }
       >
         <div className="w-[200px]">
