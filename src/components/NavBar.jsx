@@ -54,8 +54,8 @@ const NavBar = () => {
         <div className="w-[200px]">
           <h1 className="text-[#8E24AA] p-4 font-bold text-3xl">LoGo</h1>
         </div>
-        <div className=" text-[#8E24AA] font-medium">
-          <ul className="uppercase p-4">
+        <div className=" text-[#8E24AA] font-medium z-10">
+          <ul className="uppercase p-4 z-1">
             <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
               <NavLink to={"/"}>Home</NavLink>
             </li>
