@@ -11,12 +11,15 @@ const Mission = () => {
       <div className="font-bold md:text-2xl sm:text-2xl text:xl text-center max-w-[250px] mx-auto h-[50px] text-[#5c007a] uppercase">
         <p>Our misson</p>
       </div>
-      <Splide options={{
+      <Splide
+        options={{
+          perPage: 3,
           arrows: false,
           pagination: false,
           gap: "2rem",
-          autoplay:true
-        }}>
+          autoplay: true,
+        }}
+      >
         <div className="flex justify-center items-center gap-x-16 h-screen mt-[-50px]">
           <SplideSlide>
             <div className="w-[300px] h-[420px] cursor-pointer group perspective bg-transparent">
@@ -123,7 +126,7 @@ const Mission = () => {
               </div>
             </div>
           </SplideSlide>
-          <SplideSlide >
+          <SplideSlide>
             <div className="w-[300px] h-[420px] cursor-pointer group perspective bg-transparent">
               <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
                 <div className="absolute border-2 w-full h-full backface-hidden">
