@@ -27,7 +27,7 @@ const Hero = () => {
       transition={{ duration: 0.5 }}
       className="text-[#ff0000] capitalize"
     >
-      <div className="w-full max-w-[1240px] sm:mx-auto h-screen text-center flex flex-col justify-center mt-[-96px]">
+      <div className="w-full sm:mx-auto h-screen text-center flex flex-col justify-center mt-[-96px] bg-white">
         <p className="text-2xl font-bold p-2">You must survive</p>
         <h1 className="md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-[#8e24aa]">Cancer is no death sentence</h1>
         <TypeAnimation
