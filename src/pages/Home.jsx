@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Mission from '../components/Mission';
 import Newsletter from '../components/Newsletter';
 import Info from '../components/Info';
+import Education from '../components/Education';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
     <Mission />
     <Newsletter />
     <Info />
+   <Education />
       
     </div>
   )
