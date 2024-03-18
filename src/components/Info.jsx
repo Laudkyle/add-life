@@ -12,48 +12,48 @@ const Info = () => {
           Information & Support
         </h1>
         <div className="flex justify-center items-center max-w-5xl mx-auto gap-8">
-          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa]">
+          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] min-w-[300px]">
             <AiFillQuestionCircle size={60} color="#8e24aa" />
-            <h2 className="flex justify-start px-1 text-2xl ">
+            <h2 className="text-left text-2xl ">
               Searching for answers ?
             </h2>
-            <p className="flex justify-start px-1 text-[#555]">
+            <p className="text-left text-[#555]">
               Ignorance can be deadly.
             </p>
-            <p className="flex justify-start px-1 mb-12 text-[#555]">
+            <p className="text-left mb-12 text-[#555]">
               Start looking here
             </p>
-            <div className="text-center py-2  text-white bg-[#8e24aa] mx-auto rounded-full">
+            <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
               <button>About Cancer</button>
             </div>
           </div>
-          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa]">
+          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] min-w-[300px]">
             <AiFillQuestionCircle size={60} color="#8e24aa" />
-            <h2 className="flex justify-start px-1 text-2xl ">
+            <h2 className="text-left text-2xl ">
               Searching for answers ?
             </h2>
-            <p className="flex justify-start px-1 text-[#555]">
+            <p className="text-left text-[#555]">
               Ignorance can be deadly.
             </p>
-            <p className="flex justify-start px-1 mb-12 text-[#555]">
+            <p className="text-left mb-12 text-[#555]">
               Start looking here
             </p>
-            <div className="text-center py-2  text-white bg-[#8e24aa] mx-auto rounded-full">
+            <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
               <button>About Cancer</button>
             </div>
           </div>
-          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa]">
+          <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
             <AiFillQuestionCircle size={60} color="#8e24aa" />
-            <h2 className="flex justify-start px-1 text-2xl ">
+            <h2 className="text-left text-[1.3rem] ">
               Searching for answers ?
             </h2>
-            <p className="flex justify-start px-1 text-[#555]">
+            <p className="text-left text-[#555] text-[1.2rem]">
               Ignorance can be deadly.
             </p>
-            <p className="flex justify-start px-1 mb-12 text-[#555]">
+            <p className="text-left mb-12 text-[#555] text-[1rem]">
               Start looking here
             </p>
-            <div className="text-center py-2  text-white bg-[#8e24aa] mx-auto rounded-full">
+            <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
               <button>About Cancer</button>
             </div>
           </div>

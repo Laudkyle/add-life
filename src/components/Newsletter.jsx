@@ -5,10 +5,10 @@ const Newsletter = () => {
     <div className="w-full h-3/4 py-16 bg-white text-[#5c007a] px-4">
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3">
         <div className="lg:col-span-2 my-4">
-          <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
+          <h1 className="md:text-4xl sm:text-3xl text-2xl py-2">
              Want Tips & Tricks to optimize your living?
           </h1>
-          <p>Subscrib to our newsletter to stay updated.</p>
+          <p>Subscribe to our newsletter to stay updated.</p>
         </div>
         <div className="my-4">
           <div className="flex flex-col sm:flex-row items-center justify-between">
