@@ -13,24 +13,13 @@ const Education = () => {
             fights cancer alone. If you want to fight this fight, I will fight
             with you!!!"
           </p>
-            <p className="text-[1.2rem] pl-1">Betty Smith Afful</p>
-            <p className="text-[1rem] pl-2">- Cancer Survivor</p>
+          <p className="text-[1.2rem] pl-1">Betty Smith Afful</p>
+          <p className="text-[1rem] pl-2">- Cancer Survivor</p>
         </div>
         <div className="my-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between">
-            <input
-              className="w-full flex p-3 rounded-md text-[#333]"
-              type="email"
-              placeholder="Enter your Email"
-            />
-            <button className="bg-[#8e24aa] w-48 py-2 ml-4 my-6 rounded-md text-white font-medium">
-              Notify Me
-            </button>
+          <div className="relative w-full h-full">
+
           </div>
-          <p>
-            We care about the your health. Read our{" "}
-            <span className="text-[#8e24aa]">Privacy Policy</span>.{" "}
-          </p>
         </div>
       </div>
     </div>
