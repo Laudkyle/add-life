@@ -8,7 +8,7 @@ import "@splidejs/react-splide/css";
 const Mission = () => {
   return (
     <div className="w-full h-screen py-8">
-      <div className="font-semibold md:text-4xl sm:text-3xl text:2xl text-center max-w-[120px] sm:max-w-[200px] md:max-w-[250px] mx-auto h-[50px] text-[#5c007a] uppercase">
+      <div className="font-bold md:text-4xl sm:text-3xl text:2xl text-center max-w-[120px] sm:max-w-[200px] md:max-w-[250px] mx-auto h-[50px] text-[#5c007a] uppercase">
         <p
         className="border-b-2 sm:border-b-4 border-b-black"
         >Our misson</p>
