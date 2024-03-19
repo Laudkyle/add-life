@@ -18,7 +18,7 @@ const Education = () => {
         </div>
         <div className="m-4  h-full w-full">
           <div className="relative">
-            <div className=" absolute top-20/2 w-[200px] h-[200px] rounded-[50%] bg-purple-800 z-10 p-5">
+            <div className=" absolute top-20/3 w-[200px] h-[200px] rounded-[50%] bg-purple-800 z-10 p-5">
               <div className="text-white font-medium text-center text-xl py-2">
                 500+
               </div>
