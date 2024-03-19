@@ -8,7 +8,7 @@ import "@splidejs/react-splide/css";
 const Info = () => {
   return (
     <div className="text-white w-full h-screen bg-[#8e24aa] py-10 group">
-      <div className="text-center">
+      <div className="text-center md:w-full">
         <h1 className="text-4xl leading-normal mx-auto mb-12">
           Information & Support
         </h1>
@@ -19,17 +19,15 @@ const Info = () => {
             arrows: false,
             pagination: false,
             gap: "2rem",
-            breakpoints:{
-              640:{
-                perPage:1
+            breakpoints: {
+              640: {
+                perPage: 1,
               },
-              748:{
-                perPage:2
-              }
-
-            }
+              748: {
+                perPage: 2,
+              },
+            },
           }}
-          
         >
           <SplideSlide>
             <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
