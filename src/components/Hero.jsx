@@ -24,7 +24,7 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="text-[#ff0000] capitalize"
     >
       <div className="w-full sm:mx-auto h-screen text-center flex flex-col justify-center mt-[-96px] bg-white">
