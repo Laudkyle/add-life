@@ -3,21 +3,9 @@ import Heart from "../assets/heart.png";
 import Question from "../assets/question mark.png";
 import Plus from "../assets/plus.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-// import "@splidejs/react-splide/css";
-const Info = () => {
-  const [page, setPage] = useState();
+import "@splidejs/react-splide/css";
 
-  let size = window.innerWidth;
-  useEffect(() => {
-    if (size <= 600) {
-      setPage(1);
-      
-    } else if (size <= 900) {
-      setPage(2);
-    } else {
-      setPage(3);
-    }
-  }, []);
+const Info = () => {
   return (
     <div className="text-white w-full h-screen bg-[#8e24aa] py-10 group">
       <div className="text-center">
@@ -27,12 +15,21 @@ const Info = () => {
         <Splide
           className="flex justify items-center max-w-5xl mx-auto gap-8"
           options={{
-            perPage: page,
+            perPage: 3,
             arrows: false,
             pagination: false,
             gap: "2rem",
+            breakpoints:{
+              640:{
+                perPage:1
+              },
+              748:{
+                perPage:2
+              }
+
+            }
           }}
-          s
+          
         >
           <SplideSlide>
             <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
