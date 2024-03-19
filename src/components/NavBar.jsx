@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Logo from '../assets/logo.png';
 
 const NavBar = () => {
   const [nav, setNav] = useState(true);
@@ -11,7 +12,7 @@ const NavBar = () => {
   return (
     <div className="w-full flex justify-between items-center h-[96px] bg-transparent p-4">
       <div className="w-[200px] my-2">
-        <h1 className="text-[#8E24AA] font-bold text-3xl">LoGo</h1>
+        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src={Logo} alt="logo" />
       </div>
       <div className="hidden md:flex p-4 text-[#8E24AA] font-medium">
         <ul className="flex  justify-end items-center">

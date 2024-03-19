@@ -1,9 +1,7 @@
 import React from "react";
-import {
-  AiFillQuestionCircle,
-  AiOutlineHeart,
-  AiFillPlusCircle,
-} from "react-icons/ai";
+import Heart from "../assets/heart.png";
+import Question from "../assets/question mark.png";
+import Plus from "../assets/plus.png";
 const Info = () => {
   return (
     <div className="text-white w-full h-screen bg-[#8e24aa] py-10 group">
@@ -13,7 +11,7 @@ const Info = () => {
         </h1>
         <div className="flex justify-center items-center max-w-5xl mx-auto gap-8">
           <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-            <AiFillQuestionCircle size={60} color="#8e24aa" />
+            <img src={Question}  className="w-12 h-12"/>
             <h2 className="text-left text-[1.3rem] ">
               Searching for answers ?
             </h2>
@@ -28,10 +26,8 @@ const Info = () => {
             </div>
           </div>
           <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-            <AiOutlineHeart size={60} color="#44c8f0" />
-            <h2 className="text-left text-[1.3rem] ">
-              Support the cause
-            </h2>
+          <img src={Heart}  className="w-12 h-12"/>
+            <h2 className="text-left text-[1.3rem] ">Support the cause</h2>
             <p className="text-left text-[#555] text-[1.2rem]">
               Life is precious
             </p>
@@ -43,10 +39,8 @@ const Info = () => {
             </div>
           </div>
           <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-            <AiFillPlusCircle size={60} color="#57f36b" />
-            <h2 className="text-left text-[1.3rem] ">
-              Find help now
-            </h2>
+          <img src={Plus}  className="w-12 h-12"/>
+            <h2 className="text-left text-[1.3rem] ">Find help now</h2>
             <p className="text-left text-[#555] text-[1.2rem]">
               Wanna find help?
             </p>
