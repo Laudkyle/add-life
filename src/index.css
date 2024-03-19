@@ -7,5 +7,10 @@ body{
 
 }
 *{
-    font-family: "rubik";
+    font-family: "blogger";
+}
+@font-face {
+    font-family: "blogger";
+	font-weight: 400;
+    src: url("./assets/Blogger_Sans.otf") format("opentype");
 }
