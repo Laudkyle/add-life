@@ -4,6 +4,7 @@ import Mission from '../components/Mission';
 import Newsletter from '../components/Newsletter';
 import Info from '../components/Info';
 import Education from '../components/Education';
+import Faq from '../components/Faq';
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
     <Newsletter />
     <Info />
    <Education />
+   <Faq />
+   
       
     </div>
   )
