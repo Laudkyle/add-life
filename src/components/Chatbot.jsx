@@ -3,30 +3,40 @@ import axios from 'axios';
 
 const Chatbot = () => {
   const [message, setMessage] = useState('');
-  const [chats, setChats] = useState([]); // State to store all chat messages
-  const [isTyping, setIsTyping] = useState(false); // State to track typing animation
+  const [chats, setChats] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    // Scroll to the bottom of the chat window when new message is added
     const chatWindow = document.getElementById('chat-window');
     chatWindow.scrollTop = chatWindow.scrollHeight;
   }, [chats]);
 
   const sendMessage = async () => {
     try {
-      setIsTyping(true); // Start typing animation
+      setIsTyping(true);
       const res = await axios.post('http://localhost:5000/chat', { message });
       const botResponse = res.data.bot_response;
-      await typeResponse(botResponse); // Type the response
+      await typeResponse(botResponse);
     } catch (error) {
       console.error('Error sending message:', error);
     }
   };
 
   const typeResponse = async (text) => {
-    const newChats = [...chats, { message: text, sender: 'bot' }]; // Add bot's message to chats array
-    setChats(newChats);
-    setIsTyping(false); // Stop typing animation when done
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    for (let i = 0; i <= text.length; i++) {
+      setChats((prevChats) => {
+        const newChats = [...prevChats];
+        if (i === text.length) {
+          setIsTyping(false);
+          newChats.push({ message: text, sender: 'bot' });
+        } else {
+          newChats.push({ message: text.substring(0, i), sender: 'bot' });
+        }
+        return newChats;
+      });
+      await delay(50); // Adjust typing speed as needed
+    }
   };
 
   return (
