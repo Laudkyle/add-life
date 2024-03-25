@@ -1,59 +1,60 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { FaPaperPlane } from 'react-icons/fa'; // Import the Plane icon
 
 const Chatbot = () => {
   const [message, setMessage] = useState('');
-  const [conversation, setConversation] = useState([]);
+  const [response, setResponse] = useState('');
   const [isTyping, setIsTyping] = useState(false); // State to track typing animation
 
   const sendMessage = async () => {
     try {
-      const updatedConversation = [...conversation, { sender: 'user', message }];
-      setConversation(updatedConversation);
       setIsTyping(true); // Start typing animation
       const res = await axios.post('http://localhost:5000/chat', { message });
       const botResponse = res.data.bot_response;
-      const typingIndicator = 'Shannel is typing...';
-      setConversation([...updatedConversation, { sender: 'bot', message: typingIndicator }]);
-      setTimeout(() => {
-        setConversation([...updatedConversation, { sender: 'bot', message: botResponse }]);
-        setIsTyping(false); // Stop typing animation after bot response
-      }, 1500); // Typing effect duration
-      setMessage(''); // Clear input after sending message
+      await typeResponse(botResponse); // Type the response
     } catch (error) {
       console.error('Error sending message:', error);
     }
   };
 
+  const typeResponse = async (text) => {
+    for (let i = 0; i < text.length; i++) {
+      setResponse(text.substring(0, i + 1)); // Update response character by character
+      await sleep(50); // Adjust typing speed as needed
+    }
+    setIsTyping(false); // Stop typing animation when done
+  };
+
+  const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  };
+
   return (
-    <div className="fixed bottom-0 right-0 m-4 w-96">
-      <div className="bg-white/10 p-6 rounded shadow-md h-80 overflow-y-auto">
-        <div className="mt-4">
-          {conversation.map((chat, index) => (
-            <div key={index} className={`bg-gray-200 p-2 rounded ${chat.sender === 'bot' ? 'text-left' : 'text-right'}`}>
-              <strong style={{ color: chat.sender === 'user' ? '#fff' : '#555' }}>{chat.sender === 'user' ? 'You:' : 'Shannel:'}</strong> {chat.message}
-            </div>
-          ))}
-          {isTyping && (
-            <div className="bg-gray-200 p-2 rounded text-left">
-              <strong style={{ color: '#555' }}>Shannel:</strong> Shannel is typing...
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="bg-white/10 p-6 rounded shadow-md">
-        <div className="flex items-center border border-gray-400 rounded">
+    <div className="fixed bottom-0 right-0 m-4">
+      <div className="bg-white/10 p-6 rounded shadow-md w-96">
+        <div className="mb-4">
           <input
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Type your message..."
-            className="p-2 w-full outline-none bg-transparent text-white"
+            placeholder="Hello yah..."
+            className="border p-2 w-full"
           />
-          <button onClick={sendMessage} className="p-2 text-blue-500 hover:text-blue-700">
-            <FaPaperPlane size={20} />
-          </button>
+        </div>
+        <button onClick={sendMessage} className="bg-blue-500 text-white px-4 py-2 rounded">
+          Send
+        </button>
+        <div className="mt-4">
+          {isTyping && (
+            <div className="bg-gray-200 p-2 rounded">
+              <strong>Shannel:</strong> <span>{response}</span> <span className="animate-bounce">...</span>
+            </div>
+          )}
+          {!isTyping && response && (
+            <div className="bg-gray-200 p-2 rounded">
+              <strong>Shannel:</strong> {response}
+            </div>
+          )}
         </div>
       </div>
     </div>
