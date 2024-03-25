@@ -16,6 +16,7 @@ const Chatbot = () => {
       setIsTyping(true);
       const res = await axios.post('http://localhost:5000/chat', { message });
       const botResponse = res.data.bot_response;
+      setChats((prevChats) => [...prevChats, { message, sender: 'user' }]);
       await typeResponse(botResponse);
     } catch (error) {
       console.error('Error sending message:', error);
@@ -24,14 +25,19 @@ const Chatbot = () => {
 
   const typeResponse = async (text) => {
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    setChats((prevChats) => [...prevChats, { message: '...', sender: 'bot' }]);
+    await delay(500); // Delay before typing response
     for (let i = 0; i <= text.length; i++) {
       setChats((prevChats) => {
         const newChats = [...prevChats];
         if (i === text.length) {
           setIsTyping(false);
+          newChats.pop(); // Remove the '...' placeholder
           newChats.push({ message: text, sender: 'bot' });
         } else {
+          newChats.pop(); // Remove the previous character
           newChats.push({ message: text.substring(0, i), sender: 'bot' });
+          newChats.push({ message: '...', sender: 'bot' }); // Add the '...' placeholder
         }
         return newChats;
       });
@@ -48,11 +54,6 @@ const Chatbot = () => {
               <strong>{chat.sender === 'bot' ? 'Shannel' : 'You'}:</strong> {chat.message}
             </div>
           ))}
-          {isTyping && (
-            <div className="bg-gray-200 p-2 rounded text-left">
-              <strong>Shannel:</strong> <span>...</span>
-            </div>
-          )}
         </div>
         <div className="flex justify-between">
           <input
