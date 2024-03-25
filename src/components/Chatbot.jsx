@@ -13,13 +13,22 @@ const Chatbot = () => {
 
   const sendMessage = async () => {
     try {
+      if (!message.trim()) return; // Prevent sending empty messages
       setIsTyping(true);
       const res = await axios.post('http://localhost:5000/chat', { message });
       const botResponse = res.data.bot_response;
       setChats((prevChats) => [...prevChats, { message, sender: 'user' }]);
       await typeResponse(botResponse);
+      setMessage(''); // Clear input after sending
     } catch (error) {
       console.error('Error sending message:', error);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent form submission
+      sendMessage();
     }
   };
 
@@ -27,17 +36,16 @@ const Chatbot = () => {
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     setChats((prevChats) => [...prevChats, { message: '...', sender: 'bot' }]);
     await delay(500); // Delay before typing response
-    for (let i = 0; i <= text.length; i++) {
+    let lastLine = '';
+    const lines = text.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      lastLine = lines[i];
       setChats((prevChats) => {
         const newChats = [...prevChats];
-        if (i === text.length) {
+        if (i === lines.length - 1) {
           setIsTyping(false);
           newChats.pop(); // Remove the '...' placeholder
-          newChats.push({ message: text, sender: 'bot' });
-        } else {
-          newChats.pop(); // Remove the previous character
-          newChats.push({ message: text.substring(0, i), sender: 'bot' });
-          newChats.push({ message: '...', sender: 'bot' }); // Add the '...' placeholder
+          newChats.push({ message: lastLine, sender: 'bot' });
         }
         return newChats;
       });
@@ -60,6 +68,7 @@ const Chatbot = () => {
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            onKeyPress={handleKeyPress} // Add event listener for Enter key
             placeholder="Hello yah..."
             className="border p-2 w-full"
           />
