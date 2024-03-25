@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Chatbot = () => {
   const [message, setMessage] = useState('');
-  const [response, setResponse] = useState('');
+  const [chats, setChats] = useState([]); // State to store all chat messages
   const [isTyping, setIsTyping] = useState(false); // State to track typing animation
+
+  useEffect(() => {
+    // Scroll to the bottom of the chat window when new message is added
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  }, [chats]);
 
   const sendMessage = async () => {
     try {
@@ -18,21 +24,27 @@ const Chatbot = () => {
   };
 
   const typeResponse = async (text) => {
-    for (let i = 0; i < text.length; i++) {
-      setResponse(text.substring(0, i + 1)); // Update response character by character
-      await sleep(50); // Adjust typing speed as needed
-    }
+    const newChats = [...chats, { message: text, sender: 'bot' }]; // Add bot's message to chats array
+    setChats(newChats);
     setIsTyping(false); // Stop typing animation when done
   };
 
-  const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  };
-
   return (
-    <div className="fixed bottom-0 right-0 m-4">
-      <div className="bg-white/10 p-6 rounded shadow-md w-96">
-        <div className="mb-4">
+    <div className="fixed bottom-20 right-0 m-4">
+      <div className="bg-white/10 p-6 rounded shadow-md w-96 h-80">
+        <div id="chat-window" className="mt-4 mb-4 h-full overflow-y-auto">
+          {chats.map((chat, index) => (
+            <div key={index} className={`bg-gray-200 p-2 rounded ${chat.sender === 'bot' ? 'text-left' : 'text-right'}`}>
+              <strong>{chat.sender === 'bot' ? 'Shannel' : 'You'}:</strong> {chat.message}
+            </div>
+          ))}
+          {isTyping && (
+            <div className="bg-gray-200 p-2 rounded text-left">
+              <strong>Shannel:</strong> <span>...</span>
+            </div>
+          )}
+        </div>
+        <div className="flex justify-between">
           <input
             type="text"
             value={message}
@@ -40,21 +52,11 @@ const Chatbot = () => {
             placeholder="Hello yah..."
             className="border p-2 w-full"
           />
-        </div>
-        <button onClick={sendMessage} className="bg-blue-500 text-white px-4 py-2 rounded">
-          Send
-        </button>
-        <div className="mt-4">
-          {isTyping && (
-            <div className="bg-gray-200 p-2 rounded">
-              <strong>Shannel:</strong> <span>{response}</span> <span className="animate-bounce">...</span>
-            </div>
-          )}
-          {!isTyping && response && (
-            <div className="bg-gray-200 p-2 rounded">
-              <strong>Shannel:</strong> {response}
-            </div>
-          )}
+          <button onClick={sendMessage} className="flex items-center justify-center bg-blue-500 text-white px-4 py-2 rounded">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l9-9 9 9-9 9-9-9zm9 3v-2m0 4v-4" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
