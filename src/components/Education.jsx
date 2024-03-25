@@ -28,7 +28,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-          <div class="pl-20">
+          <div className="pl-20">
             <img src={Back} alt="" className="w-full h-full object-cover" />
           </div>
         </div>
