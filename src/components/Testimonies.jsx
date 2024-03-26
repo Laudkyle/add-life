@@ -10,16 +10,16 @@ function Testimonies() {
         </h1>
         <div className="grid grid-cols-3 w-full mx-auto">
           <div className="col-span-1 w-full h-full ">
-            <div className="flex flex-col w-[300px] border-2 rounded-md bg-[#ffe7fc] overflow-hidden">
-              <div className="my-2 w-full h-full">
+            <div className="flex flex-col w-[280px] h-[450px] border-2 rounded-md bg-[#8e24aa] overflow-hidden]">
+              <div className="w-full border-1 bg-[#ffe7fc] rounded-b-[100%]">
                 <img
                   src={Betty}
                   alt="betty"
-                  className="w-full h-full rounded-full mx-auto"
+                  className="w-[250px] h-[250px] rounded-full mx-auto my-2"
                 />
               </div>
-              <div className="m-2">
-                <p className="md:text-xl text-[1rem] md:text-center text-justify">
+              <div className="bg-[#8e24aa] text-white ">
+                <p className="mx-2 md:text-[1.2rem] text-[1rem] md:text-center text-justify">
                   Patients need someone to hope and support them emotionally. No
                   one fights cancer alone. If you want to fight this fight, I
                   will fight with you!!!
@@ -27,6 +27,25 @@ function Testimonies() {
               </div>
             </div>
           </div>
+          <div className="col-span-1 w-full h-full ">
+            <div className="flex flex-col w-[280px] h-[450px] border-2 rounded-md bg-[#8e24aa] overflow-hidden]">
+              <div className="w-full border-1 bg-[#ffe7fc] rounded-b-[100%]">
+                <img
+                  src={Betty}
+                  alt="betty"
+                  className="w-[250px] h-[250px] rounded-full mx-auto my-2"
+                />
+              </div>
+              <div className="bg-[#8e24aa] text-white ">
+                <p className="mx-2 md:text-[1.2rem] text-[1rem] md:text-center text-justify">
+                  Patients need someone to hope and support them emotionally. No
+                  one fights cancer alone. If you want to fight this fight, I
+                  will fight with you!!!
+                </p>
+              </div>
+            </div>
+          </div>
+updates
         </div>
       </div>
     </div>
