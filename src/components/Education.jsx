@@ -4,8 +4,8 @@ const Education = () => {
   return (
     <div className="w-full h-3/4 py-16 bg-white text-[#5c007a] px-8">
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 ">
-        <div className="lg:col-span-2 my-2 ">
-          <h1 className="md:text-4xl sm:text-3xl text-2xl py-2 text-[#4c1c5c]">
+        <div className="lg:col-span-2 my-2 sm:text-left text-center">
+          <h1 className="md:text-4xl sm:text-3xl text-2xl py-2 text-[#4c1c5c] sm:text-left text-center">
             Support Matters
           </h1>
           <p className="md:text-2xl sm:text-xl text-[#8e24aa]">
