@@ -11,7 +11,8 @@ const Footer = () => {
                            A123 lost street <br/>
                            Chadlens PB 112232 <br/>
                            Ghana <br /><br />
-                           <strong>Phone:</strong>
+                           <strong>Phone:</strong> : +233 (0)24 124 3373 <br />
+                           <strong>Email:</strong> : addlifetoyears@gmail.com <br />
                         </div>
                         <div className="mb-5">
 
