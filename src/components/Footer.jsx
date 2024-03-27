@@ -8,6 +8,8 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                         <div className="mb-5">
                            <h4>Compnay Name</h4> 
+                           A123 lost street <br/>
+                           Chadlens PB 112232 <br/>
                         </div>
                         <div className="mb-5">
 
