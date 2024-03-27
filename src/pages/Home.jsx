@@ -8,20 +8,21 @@ import Faq from '../components/Faq';
 import Hope from '../components/Hope';
 import Testimonies from '../components/Testimonies';
 import Chart from '../components/Chart';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
     <div>
-    <Hero />
-    <Mission />
-    <Newsletter />
-    <Info />
-   <Education />
-   <Faq />
-   <Hope />
-   <Testimonies />
-   <Chart />
-      
+      <Hero />
+      <Mission />
+      <Newsletter />
+      <Info />
+      <Education />
+      <Faq />
+      <Hope />
+      <Testimonies />
+      <Chart />
+      <Footer />
     </div>
   )
 }
