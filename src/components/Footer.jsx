@@ -10,6 +10,8 @@ const Footer = () => {
                            <h4>Compnay Name</h4> 
                            A123 lost street <br/>
                            Chadlens PB 112232 <br/>
+                           Ghana <br /><br />
+                           <strong>Phone:</strong>
                         </div>
                         <div className="mb-5">
 
