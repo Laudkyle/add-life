@@ -40,6 +40,7 @@ const Footer = () => {
                         </div>
                         <div className="mb-5">
                             <h4>Join Our Newsletter</h4>
+                            
                         </div>
                     </div>
 
