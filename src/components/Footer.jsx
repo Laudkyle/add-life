@@ -15,6 +15,14 @@ const Footer = () => {
                            <strong>Email:</strong> : addlifetoyears@gmail.com <br />
                         </div>
                         <div className="mb-5">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
 
                         </div>
                         <div className="mb-5">
