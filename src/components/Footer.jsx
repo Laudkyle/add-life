@@ -32,15 +32,6 @@ const Footer = () => {
                                 <li className={"p-2 "}>
                                     <NavLink to={"/foundation"}>Our Foundation</NavLink>
                                 </li>
-                                <li className={"p-2 "}>
-                                    <NavLink to={"/events"}>News & Events</NavLink>
-                                </li>
-                                <li className={"p-2 "}>
-                                    <NavLink to={"/projects"}>Projects</NavLink>
-                                </li>
-                                <li className={"p-2"}>
-                                    <NavLink to={"/gallery"}>Gallery</NavLink>
-                                </li>
                             </ul>
 
                         </div>
