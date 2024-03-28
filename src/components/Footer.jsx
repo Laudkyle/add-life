@@ -14,22 +14,22 @@ const Footer = () => {
                             <strong>Phone:</strong> : +233 (0)24 124 3373 <br />
                             <strong>Email:</strong> : addlifetoyears@gmail.com <br />
                         </div>
-                        <div className="mb-5">
+                        <div className="mb-5 flex flex-col ">
                             <h4>Useful Links</h4>
-                            <ul className="flex flex-cols justify-center items-center">
-                                <li className={"p-2 "}>
+                            <ul className="justify-center items-center">
+                                <li className={"py-1 "}>
                                     <NavLink to={"/"}>Home</NavLink>
                                 </li>
-                                <li className={"p-2 "}>
+                                <li className={"py-1 "}>
                                     <NavLink to={"/about"}>Cancer</NavLink>
                                 </li>
-                                <li className={"p-2 "}>
+                                <li className={"py-1 "}>
                                     <NavLink to={"/involved"}>Get Involved</NavLink>
                                 </li>
-                                <li className={"p-2 "}>
+                                <li className={"py-1 "}>
                                     <NavLink to={"/support"}>Lymphoma Support</NavLink>
                                 </li>
-                                <li className={"p-2 "}>
+                                <li>
                                     <NavLink to={"/foundation"}>Our Foundation</NavLink>
                                 </li>
                             </ul>
