@@ -16,7 +16,7 @@ const Footer = () => {
                         </div>
                         <div className="mb-5">
                             <h4>Useful Links</h4>
-                            <ul className="flex flex-cols  justify-center items-center">
+                            <ul className="flex  justify-center items-center">
                                 <li className={"p-2 "}>
                                     <NavLink to={"/"}>Home</NavLink>
                                 </li>
