@@ -17,7 +17,7 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="mb-5 flex flex-col ">
-                        <h4 className="text-2xl pb-4">Useful Links</h4>
+                            <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
                                 <li className={"py-1 "}>
                                     <NavLink to={"/"}>Home</NavLink>
@@ -38,10 +38,10 @@ const Footer = () => {
 
                         </div>
                         <div className="mb-5">
-                        <h4 className="text-2xl pb-4">Our Services</h4>
+                            <h4 className="text-2xl pb-4">Our Services</h4>
                         </div>
                         <div className="mb-5">
-                        <h4 className="text-2xl pb-4">Join Our Newsletter</h4>
+                            <h4 className="text-2xl pb-4">Join Our Newsletter</h4>
                             <p>Join 1,500+ others and never miss out on our health tips and more</p>
                         </div>
                     </div>
