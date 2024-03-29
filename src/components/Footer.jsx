@@ -8,7 +8,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                         <div className="mb-5">
                             <h4 className="text-2xl pb-4">Add Life To Years Cancer Foundation</h4>
-                            <p>
+                            <p className="text-gray-100">
                                 A123 lost street <br />
                                 Tema PB 112232 <br />
                                 Ghana <br /><br />
@@ -17,7 +17,7 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="mb-5 flex flex-col ">
-                            <h4>Useful Links</h4>
+                        <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
                                 <li className={"py-1 "}>
                                     <NavLink to={"/"}>Home</NavLink>
