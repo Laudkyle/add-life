@@ -41,7 +41,7 @@ const Footer = () => {
                         <h4 className="text-2xl pb-4">Our Services</h4>
                         </div>
                         <div className="mb-5">
-                            <h4>Join Our Newsletter</h4>
+                        <h4 className="text-2xl pb-4">Join Our Newsletter</h4>
                             <p>Join 1,500+ others and never miss out on our health tips and more</p>
                         </div>
                     </div>
