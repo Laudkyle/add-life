@@ -7,12 +7,14 @@ const Footer = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                         <div className="mb-5">
-                            <h4>Add Life To Years Cancer Foundation</h4>
-                            A123 lost street <br />
-                            Chadlens PB 112232 <br />
-                            Ghana <br /><br />
-                            <strong>Phone:</strong> : +233 (0)54 720 3373 <br />
-                            <strong>Email:</strong> : addlifetoyears@gmail.com <br />
+                            <h4 className="text-2xl pb-4">Add Life To Years Cancer Foundation</h4>
+                            <p>
+                                A123 lost street <br />
+                                Tema PB 112232 <br />
+                                Ghana <br /><br />
+                                <strong>Phone:</strong> : +233 (0)54 720 3373 <br />
+                                <strong>Email:</strong> : addlifetoyears@gmail.com <br />
+                            </p>
                         </div>
                         <div className="mb-5 flex flex-col ">
                             <h4>Useful Links</h4>
