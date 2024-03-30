@@ -50,10 +50,6 @@ const Footer = () => {
                                     <NavLink to={"/support"}>Lymphoma Support</NavLink>
                                 </li>
 
-                              
-                                <li>
-                                    <NavLink to={"/foundation"}>Volenteering</NavLink>
-                                </li>
                             </ul>
 
                         </div>
