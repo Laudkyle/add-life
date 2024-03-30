@@ -55,6 +55,15 @@ const Footer = () => {
                         <div className="mb-5">
                             <h4 className="text-2xl pb-4">Join Our Newsletter</h4>
                             <p>Join 1,500+ others and never miss out on our health tips and more</p>
+                            <div className="my-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between">
+            <input className="w-full flex p-3 rounded-md text-[#333]" type="email" placeholder="Enter your Email" />
+            <button className="bg-[#8e24aa] w-48 py-2 ml-4 my-6 rounded-md text-white font-medium">
+              Notify Me
+            </button>
+          </div>
+          <p>We care about the your health. Read our <span className="text-[#8e24aa]">Privacy Policy</span>. </p>
+        </div>
                         </div>
                     </div>
                 </div>
