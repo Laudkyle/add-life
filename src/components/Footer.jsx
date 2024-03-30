@@ -62,7 +62,6 @@ const Footer = () => {
                                         Notify Me
                                     </button>
                                 </div>
-                                <p>We care about the your health. Read our <span className="text-[#8e24aa]">Privacy Policy</span>. </p>
                             </div>
                         </div>
                     </div>
