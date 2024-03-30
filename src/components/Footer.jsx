@@ -9,7 +9,6 @@ const Footer = () => {
                         <div className="mb-5">
                             <h4 className="text-2xl pb-4">Add Life To Years Cancer Foundation</h4>
                             <p className="text-gray-100">
-                                {/* A123 lost street <br /> */}
                                 Tema P.O. Box 11203 <br />
                                 Greater Accra, Ghana <br /><br />
                                 <strong>Phone:</strong> : +233 (0)54 720 3373 <br />
