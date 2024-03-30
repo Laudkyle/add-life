@@ -43,13 +43,14 @@ const Footer = () => {
                                 <li>
                                     <NavLink to={"/events"}>Awareness Creation</NavLink>
                                 </li>
+                                <li>
+                                    <NavLink to={"/foundation"}>Health Talks</NavLink>
+                                </li>
                                 <li className={"py-1 "}>
                                     <NavLink to={"/support"}>Lymphoma Support</NavLink>
                                 </li>
 
-                                <li>
-                                    <NavLink to={"/foundation"}>Health Talks</NavLink>
-                                </li>
+                              
                                 <li>
                                     <NavLink to={"/foundation"}>Volenteering</NavLink>
                                 </li>
