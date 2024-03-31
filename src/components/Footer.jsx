@@ -58,7 +58,7 @@ const Footer = () => {
                             <div className="my-4">
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
                                     <input className="w-full flex p-2 rounded-md text-[#333]" type="email" placeholder="Enter your Email" />
-                                    <button className="bg-[#8e24aa] w-48 py-2 ml-4 my-6 rounded-md text-white font-medium mx-auto">
+                                    <button className="bg-[#8e24aa] w-48 py-2 ml-4 my-6 rounded-md text-white font-medium">
                                         Subscribe
                                     </button>
                                 </div>
