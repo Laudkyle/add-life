@@ -22,7 +22,7 @@ const Footer = () => {
                             <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/"}><FaChevronRight />Home</NavLink>
+                                    <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight />H</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
                                     <NavLink to={"/about"}>Cancer</NavLink>
