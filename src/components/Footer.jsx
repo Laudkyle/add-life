@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaChevronCircleRight } from "react-icons/fa"
+
+
 const Footer = () => {
     return (
         <div className="w-100 h-[60%]">
@@ -19,7 +22,7 @@ const Footer = () => {
                             <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/"}>Home</NavLink>
+                                    <NavLink to={"/"}><FaChevronCircleRight />Home</NavLink>
                                 </li>
                                 <li className={"py-1 "}>
                                     <NavLink to={"/about"}>Cancer</NavLink>
