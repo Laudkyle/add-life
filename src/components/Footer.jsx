@@ -34,7 +34,7 @@ const Footer = () => {
                                     <NavLink to={"/support"}><div className="flex flex-row items-center"><FaChevronRight />Lymphoma Support</div></NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to={"/foundation"}>Our Foundation</NavLink>
+                                    <NavLink to={"/foundation"}><div className="flex flex-row items-center"><FaChevronRight />Home</div></NavLink>
                                 </li>
                             </ul>
 
