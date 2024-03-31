@@ -25,10 +25,10 @@ const Footer = () => {
                                     <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight />Home</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/about"}><div className="flex flex-row items-center"><FaChevronRight />cancer</div></NavLink>
+                                    <NavLink to={"/about"}><div className="flex flex-row items-center"><FaChevronRight />Cancer</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/involved"}>Get Involved</NavLink>
+                                    <NavLink to={"/involved"}><div className="flex flex-row items-center"><FaChevronRight />Get Involved</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
                                     <NavLink to={"/support"}>Lymphoma Support</NavLink>
