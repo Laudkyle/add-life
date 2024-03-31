@@ -43,10 +43,10 @@ const Footer = () => {
                             <h4 className="text-2xl pb-4">Our Services</h4>
                             <ul className="justify-center items-center">
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/events"}><div className="flex flex-row items-center"><FaChevronRight />Home</div></NavLink>
+                                    <NavLink to={"/events"}><div className="flex flex-row items-center"><FaChevronRight />Awareness Creation</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/gallery"}>Health Talks</NavLink>
+                                    <NavLink to={"/gallery"}><div className="flex flex-row items-center"><FaChevronRight />Home</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
                                     <NavLink to={"/support"}>Lymphoma Support</NavLink>
