@@ -47,7 +47,7 @@ const Footer = () => {
                                     <NavLink to={"/gallery"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Health Talks</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
-                                    <NavLink to={"/support"}><div className="flex flex-row items-center"><FaChevronRight />Lymphoma Support</div></NavLink>
+                                    <NavLink to={"/support"}><div className="flex flex-row items-center"><FaChevronRight size={10}/>Lymphoma Support</div></NavLink>
                                 </li>
 
                             </ul>
