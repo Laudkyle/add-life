@@ -21,7 +21,7 @@ const Footer = () => {
                         <div className="mb-5 flex flex-col ">
                             <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
-                                <li className="py-1 hover:text-4xl">
+                                <li className="py-1">
                                     <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Home</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
