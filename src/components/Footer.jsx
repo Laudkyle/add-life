@@ -32,7 +32,7 @@ const Footer = () => {
                                 </li>
 
                                 <li>
-                                    <NavLink to={"/foundation"}><div className="flex flex-row items-center"><FaChevronRight />Our Foundation</div></NavLink>
+                                    <NavLink to={"/foundation"}><div className="flex flex-row items-center"><FaChevronRight size={10}/>Our Foundation</div></NavLink>
                                 </li>
                             </ul>
 
