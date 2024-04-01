@@ -24,7 +24,7 @@ const Footer = () => {
                                 <li className="py-1">
                                     <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Home</div></NavLink>
                                 </li>
-                                <li className={"py-1 "}>
+                                <li className={"py-1 hover:text-4xl"}>
                                     <NavLink to={"/about"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Cancer</div></NavLink>
                                 </li>
                                 <li className={"py-1 "}>
