@@ -59,8 +59,8 @@ const Footer = () => {
                             <div className="my-4">
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
                                     <div className="flex flex-row flex-wrap">
-                                        <input className="w-2/3 flex p-2 text-[#333]" type="email" placeholder="email@example.com" />
-                                        <button className="bg-[#8e24aa] w-1/3 p-2  text-white fnt-medium hover:bg-pink-600">
+                                        <input className="w-2/3 p-2 text-[#333]" type="email" placeholder="email@example.com" />
+                                        <button className="bg-[#8e24aa] w-1/3 p-2  text-white font-medium hover:bg-pink-600">
                                             Subscribe
                                         </button>
                                     </div>
