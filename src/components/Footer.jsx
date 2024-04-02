@@ -58,10 +58,12 @@ const Footer = () => {
                             <p className="pb-2">Join 1,500+ others and never miss out on our health tips and more</p>
                             <div className="my-4">
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
-                                    <input className="w-2/3 flex p-2 rounded-md text-[#333]" type="email" placeholder="email@example.com" />
-                                    <button className="bg-[#8e24aa] w-48 py-2 ml-4 my-6 rounded-md text-white font-medium hover:bg-pink-600">
-                                        Subscribe
-                                    </button>
+                                    <form className="flex flex-row flex-wrap">
+                                        <input className="w-2/3 flex p-2 rounded-md text-[#333]" type="email" placeholder="email@example.com" />
+                                        <button className="bg-[#8e24aa] w-1/3 py-2 ml-4 my-6 rounded-md text-white font-medium hover:bg-pink-600">
+                                            Subscribe
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
