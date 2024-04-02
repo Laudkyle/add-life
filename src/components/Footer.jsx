@@ -70,6 +70,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="w-full bg-purple-900 text-gray-100 px-10">
+                
+            </div>
         </div>
 
     );
