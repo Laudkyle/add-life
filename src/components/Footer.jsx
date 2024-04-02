@@ -55,7 +55,7 @@ const Footer = () => {
                         </div>
                         <div className="mb-5">
                             <h4 className="text-2xl pb-4">Join Our Newsletter</h4>
-                            <p>Join 1,500+ others and never miss out on our health tips and more</p>
+                            <p className="pb-2">Join 1,500+ others and never miss out on our health tips and more</p>
                             <div className="my-4">
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
                                     <input className="w-full flex p-2 rounded-md text-[#333]" type="email" placeholder="Enter your Email" />
