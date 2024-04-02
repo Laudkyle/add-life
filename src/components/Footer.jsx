@@ -60,7 +60,7 @@ const Footer = () => {
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
                                     <div className="flex flex-row flex-wrap">
                                         <input className="w-2/3 p-2 text-[#333]" type="email" placeholder="email@example.com" />
-                                        <button className="bg-[#8e24aa] w-1/3 p-2  text-white font-medium hover:bg-pink-600">
+                                        <button className="w-1/3 bg-[#8e24aa] p-2  text-white font-medium hover:bg-pink-600">
                                             Subscribe
                                         </button>
                                     </div>
