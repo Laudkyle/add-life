@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
             <div className="w-full bg-purple-900 text-gray-100 px-10">
                 <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
-                    
+                    <div className="text-center"></div>
                 </div>
             </div>
         </div>
