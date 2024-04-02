@@ -58,7 +58,7 @@ const Footer = () => {
                             <p className="pb-2">Join 1,500+ others and never miss out on our health tips and more</p>
                             <div className="my-4">
                                 <div className="flex flex-col sm:flex-row items-center justify-between">
-                                    <form className="flex flex-row flex-wrap">
+                                    <div className="flex flex-row flex-wrap">
                                         <input className="w-2/3 flex p-2 text-[#333]" type="email" placeholder="email@example.com" />
                                         <button className="bg-[#8e24aa] w-1/3 p-2  text-white fnt-medium hover:bg-pink-600">
                                             Subscribe
