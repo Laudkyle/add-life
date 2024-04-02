@@ -76,6 +76,9 @@ const Footer = () => {
                         <div className="">Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> All Rights Resevered</div>
                     </div>
                 </div>
+                <div className="">
+                    
+                </div>
             </div>
         </div>
 
