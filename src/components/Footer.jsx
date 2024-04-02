@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FaChevronRight } from "react-icons/fa"
+import { FaChevronRight, FaFacebook, FaYoutube } from "react-icons/fa"
 
 
 const Footer = () => {
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="">
-                    
+                <a href="#"
                 </div>
             </div>
         </div>
