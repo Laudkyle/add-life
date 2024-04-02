@@ -70,9 +70,11 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-purple-900 text-gray-100 px-10">
+            <div className="w-full bg-[#8e24aa] text-gray-100 px-10">
                 <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
-                    <div className="text-center"></div>
+                    <div className="text-center">
+                        <div className="">Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> All Rights Resevered</div>
+                    </div>
                 </div>
             </div>
         </div>
