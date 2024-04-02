@@ -63,7 +63,7 @@ const Footer = () => {
                                         <button className="bg-[#8e24aa] w-1/3 p-2  text-white fnt-medium hover:bg-pink-600">
                                             Subscribe
                                         </button>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
