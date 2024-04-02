@@ -22,17 +22,17 @@ const Footer = () => {
                             <h4 className="text-2xl pb-4">Useful Links</h4>
                             <ul className="justify-center items-center">
                                 <li className="py-1">
-                                <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Home</div></NavLink>
+                                    <NavLink to={"/"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Home</div></NavLink>
                                 </li>
                                 <li className="py-1">
                                     <NavLink to={"/about"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Cancer</div></NavLink>
                                 </li>
                                 <li className="py-1">
-                                    <NavLink to={"/involved"}><div className="flex flex-row items-center"><FaChevronRight size={10}/>Get Involved</div></NavLink>
+                                    <NavLink to={"/involved"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Get Involved</div></NavLink>
                                 </li>
 
                                 <li className="py-1">
-                                    <NavLink to={"/foundation"}><div className="flex flex-row items-center"><FaChevronRight size={10}/>Our Foundation</div></NavLink>
+                                    <NavLink to={"/foundation"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Our Foundation</div></NavLink>
                                 </li>
                             </ul>
 
@@ -47,7 +47,7 @@ const Footer = () => {
                                     <NavLink to={"/gallery"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Health Talks</div></NavLink>
                                 </li>
                                 <li className="py-1">
-                                    <NavLink to={"/support"}><div className="flex flex-row items-center"><FaChevronRight size={10}/>Lymphoma Support</div></NavLink>
+                                    <NavLink to={"/support"}><div className="flex flex-row items-center"><FaChevronRight size={10} />Lymphoma Support</div></NavLink>
                                 </li>
 
                             </ul>
