@@ -75,9 +75,9 @@ const Footer = () => {
                     <div className="text-center">
                         <div>Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> <br/>All Rights Resevered</div>
                     </div>
-                    <div className="flex flex-col text-center text-xl text-white mb-2">
-                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1  pt-1"><FaFacebook size={50}/></a>
-                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 pt-1"><FaYoutube size={50} /></a>
+                    <div className="flex flex-row gap-2 text-center text-xl text-white my-2">
+                        <a href="#" className="rounded-full mx-1 bg-white pt-2"><FaFacebook color="blue" size={50}/></a>
+                        <a href="#" className="rounded-full mx-2 bg-white pt-2"><FaYoutube size={50} color="red"  /></a>
                     </div>
                 </div>
 
