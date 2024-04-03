@@ -76,11 +76,11 @@ const Footer = () => {
                         <div className="">Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> All Rights Resevered</div>
                     </div>
                     <div className="">
-                <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaFacebook /></a>
-                <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube /></a>
+                        <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaFacebook /></a>
+                        <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube /></a>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
         </div>
 
