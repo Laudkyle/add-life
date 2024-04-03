@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
                     <div className="text-center text-white">
                         <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaFacebook size={10}/></a>
-                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube /></a>
+                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube size={10} /></a>
                     </div>
                 </div>
 
