@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Pages />
-        {/* <Chatbot /> */}
+        <Chatbot />
       </BrowserRouter>
     </div>
   );
