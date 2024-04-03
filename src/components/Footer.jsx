@@ -73,11 +73,11 @@ const Footer = () => {
             <div className="w-full bg-[#8e24aa] text-gray-100 px-10">
                 <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
                     <div className="text-center">
-                        <div className="">Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> All Rights Resevered</div>
+                        <div>Copyright <strong><span>Addlifetoyears Cancer Foundation</span></strong> All Rights Resevered</div>
                     </div>
-                    <div className="">
-                        <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaFacebook /></a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube /></a>
+                    <div className="text-center text-white">
+                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaFacebook size={10}/></a>
+                        <a href="#" className="rounded-full bg-pink-500 hover:bg-pink-800 mx-1 inline-block pt-1"><FaYoutube /></a>
                     </div>
                 </div>
 
