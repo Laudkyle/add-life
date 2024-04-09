@@ -75,16 +75,16 @@ const Chart = () => {
         label: 'Overall Cancer Mortality Rate (U.S.)',
         data: [170.1, 168.5, 166.4, 163.5, 160.3, 157.5, 154.4, 151.5, 149.0, 146.6, 144.1, 142.7],
         backgroundColor: '#ff6384',
+        fill:false,
         borderColor: 'rgba(255, 255, 255, 0.2)',
-        tension: 0.7, // Set tension to connect points smoothly
-        borderWidth: 2,
+        tension: 0.1, 
       }, {
         label: 'Blood Cancer Mortality Rate (U.S.)',
         data: [24.5, 24.2, 24.0, 23.7, 23.4, 23.1, 22.9, 22.7, 22.5, 22.2, 22.0, 21.8],
         backgroundColor: '#36a2eb',
+        fill:false,
         borderColor: 'rgba(255, 255, 255, 0.2)',
-        tension: 0.7, // Set tension to connect points smoothly
-        borderWidth: 2,
+        tension: 0.1, 
       },
     ],
   };

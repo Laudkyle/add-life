@@ -17,7 +17,7 @@ const DonutChart = ({ cancerData, bloodCancerData, mortalityRateData, options })
         <Bar data={bloodCancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
       </div>
       <div className="w-full md:w-80 h-80">
-        <h2 className="text-center">Survival Rate Data</h2>
+        <h2 className="text-center">Mortality Rate Data</h2>
         <Line data={mortalityRateData} options={{ ...options, animation: { animateScale: true } }} />
       </div>
     </div>
