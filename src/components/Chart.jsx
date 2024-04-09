@@ -2,7 +2,7 @@ import React from 'react';
 import DonutChart from './DonutChart';
 
 const Chart = () => {
-  // Real cancer statistics data
+  // Sample data for the charts
   const cancerData = {
     labels: [
       'Breast', 'Lung', 'Colorectal', 'Prostate', 'Melanoma', 'Bladder',
@@ -43,7 +43,6 @@ const Chart = () => {
       },
     ],
   };
-  
 
   const bloodCancerData = {
     labels: ['Leukemia', 'Lymphoma', 'Myeloma'],
@@ -86,15 +85,12 @@ const Chart = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-80 h-80">
-        <DonutChart data={cancerData} options={options} />
-      </div>
-      <div className="w-80 h-80">
-        <DonutChart data={bloodCancerData} options={options} />
-      </div>
-      <div className="w-80 h-80">
-        <DonutChart data={survivalRateData} options={options} />
-      </div>
+      <DonutChart
+        cancerData={cancerData}
+        bloodCancerData={bloodCancerData}
+        survivalRateData={survivalRateData}
+        options={options}
+      />
     </div>
   );
 };
