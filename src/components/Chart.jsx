@@ -78,13 +78,6 @@ const Chart = () => {
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1,
       },
-      {
-        label: 'Temperature',
-        data: [7, 8, 11, 13, 15, 20, 22],
-        fill: false,
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1,
-      },
     ],
   };
 
