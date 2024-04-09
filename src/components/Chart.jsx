@@ -1,5 +1,5 @@
 import React from 'react';
-import DonutChart from './Chart';
+import DonutChart from './DonutChart';
 
 const Chart = () => {
   // Sample data for the charts
