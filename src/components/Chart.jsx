@@ -2,48 +2,55 @@ import React from 'react';
 import DonutChart from './DonutChart';
 
 const Chart = () => {
-  // Sample data for the charts
-  const donutData = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  // Real cancer statistics data
+  const cancerData = {
+    labels: ['Breast', 'Lung', 'Colorectal', 'Prostate', 'Skin'],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Estimated New Cancer Cases in 2022 (U.S.)',
+        data: [281550, 235760, 149500, 161000, 108130],
         backgroundColor: [
-          'red',
-          'blue',
-          'yellow',
-          'green',
-          'purple',
-          'orange',
+          '#ff6384', // Breast
+          '#36a2eb', // Lung
+          '#ffce56', // Colorectal
+          '#4bc0c0', // Prostate
+          '#9966ff', // Skin
         ],
         borderColor: 'rgba(255, 255, 255, 0.2)',
       },
     ],
   };
 
-  const barData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  const bloodCancerData = {
+    labels: ['Leukemia', 'Lymphoma', 'Myeloma'],
     datasets: [
       {
-        label: 'Sales',
-        data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 1,
+        label: 'Estimated New Cases of Blood Cancers in 2022 (U.S.)',
+        data: [61750, 84960, 34790],
+        backgroundColor: [
+          '#ff6384', // Leukemia
+          '#36a2eb', // Lymphoma
+          '#ffce56', // Myeloma
+        ],
+        borderColor: 'rgba(255, 255, 255, 0.2)',
       },
     ],
   };
 
-  const lineData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  const survivalRateData = {
+    labels: ['5-Year Survival Rate'],
     datasets: [
       {
-        label: 'Temperature',
-        data: [7, 8, 11, 13, 15, 20, 22],
-        fill: false,
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1,
+        label: 'Overall Cancer Survival Rate (U.S.)',
+        data: [68.6],
+        backgroundColor: ['#ff6384'],
+        borderColor: 'rgba(255, 255, 255, 0.2)',
+      },
+      {
+        label: 'Blood Cancer Survival Rate (U.S.)',
+        data: [62.9],
+        backgroundColor: ['#36a2eb'],
+        borderColor: 'rgba(255, 255, 255, 0.2)',
       },
     ],
   };
@@ -55,7 +62,15 @@ const Chart = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <DonutChart donutData={donutData} barData={barData} lineData={lineData} options={options} />
+      <div className="w-80 h-80">
+        <DonutChart data={cancerData} options={options} />
+      </div>
+      <div className="w-80 h-80">
+        <DonutChart data={bloodCancerData} options={options} />
+      </div>
+      <div className="w-80 h-80">
+        <DonutChart data={survivalRateData} options={options} />
+      </div>
     </div>
   );
 };
