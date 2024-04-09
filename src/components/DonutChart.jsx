@@ -5,7 +5,7 @@ import { Chart, ArcElement, Legend, Title, Tooltip, CategoryScale, LinearScale, 
 
 Chart.register(ArcElement, Legend, Title, Tooltip, CategoryScale, LinearScale, BarElement, LineElement, PointElement);
 
-const DonutChart = ({ cancerData, bloodCancerData, survivalRateData, options }) => {
+const DonutChart = ({ cancerData, bloodCancerData, mortalityRateData, options }) => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
       <div className="w-full md:w-80 h-80">
@@ -18,7 +18,7 @@ const DonutChart = ({ cancerData, bloodCancerData, survivalRateData, options }) 
       </div>
       <div className="w-full md:w-80 h-80">
         <h2 className="text-center">Survival Rate Data</h2>
-        <Bar data={survivalRateData} options={{ ...options, animation: { animateScale: true } }} />
+        <Line data={mortalityRateData} options={{ ...options, animation: { animateScale: true } }} />
       </div>
     </div>
   );
@@ -27,7 +27,7 @@ const DonutChart = ({ cancerData, bloodCancerData, survivalRateData, options }) 
 DonutChart.propTypes = {
   cancerData: PropTypes.object.isRequired,
   bloodCancerData: PropTypes.object.isRequired,
-  survivalRateData: PropTypes.object.isRequired,
+  mortalityRateData: PropTypes.object.isRequired,
   options: PropTypes.object,
 };
 
