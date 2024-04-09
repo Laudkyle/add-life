@@ -69,22 +69,21 @@ const Chart = () => {
   };
 
   const mortalityRateData = {
-    labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        label: 'Overall Cancer Mortality Rate (U.S.)',
-        data: [170.1, 168.5, 166.4, 163.5, 160.3, 157.5, 154.4, 151.5, 149.0, 146.6, 144.1, 142.7],
-        backgroundColor: '#ff6384',
-        fill:false,
-        borderColor: 'rgba(255, 255, 255, 0.2)',
-        tension: 0.1, 
-      }, {
-        label: 'Blood Cancer Mortality Rate (U.S.)',
-        data: [24.5, 24.2, 24.0, 23.7, 23.4, 23.1, 22.9, 22.7, 22.5, 22.2, 22.0, 21.8],
-        backgroundColor: '#36a2eb',
-        fill:false,
-        borderColor: 'rgba(255, 255, 255, 0.2)',
-        tension: 0.1, 
+        label: 'Temperature',
+        data: [7, 8, 11, 13, 15, 20, 22],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+      },
+      {
+        label: 'Temperature',
+        data: [7, 1, 4, 3, 16, 27, 22],
+        fill: false,
+        borderColor: 'rgb(7, 192, 192)',
+        tension: 0.1,
       },
     ],
   };
