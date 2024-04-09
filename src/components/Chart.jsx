@@ -4,22 +4,46 @@ import DonutChart from './DonutChart';
 const Chart = () => {
   // Real cancer statistics data
   const cancerData = {
-    labels: ['Breast', 'Lung', 'Colorectal', 'Prostate', 'Skin'],
+    labels: [
+      'Breast', 'Lung', 'Colorectal', 'Prostate', 'Melanoma', 'Bladder',
+      'Non-Hodgkin Lymphoma', 'Kidney', 'Thyroid', 'Endometrial', 'Pancreatic', 'Leukemia'
+    ],
     datasets: [
       {
         label: 'Estimated New Cancer Cases in 2022 (U.S.)',
-        data: [281550, 235760, 149500, 161000, 108130],
+        data: [
+          281550, // Breast
+          235760, // Lung
+          149500, // Colorectal
+          161000, // Prostate
+          108130, // Melanoma
+          83820,  // Bladder
+          81270,  // Non-Hodgkin Lymphoma
+          76940,  // Kidney
+          60020,  // Thyroid
+          66790,  // Endometrial
+          60430,  // Pancreatic
+          61750   // Leukemia
+        ],
         backgroundColor: [
           '#ff6384', // Breast
           '#36a2eb', // Lung
           '#ffce56', // Colorectal
           '#4bc0c0', // Prostate
-          '#9966ff', // Skin
+          '#9966ff', // Melanoma
+          '#ff9f40', // Bladder
+          '#ff6384', // Non-Hodgkin Lymphoma
+          '#36a2eb', // Kidney
+          '#ffce56', // Thyroid
+          '#4bc0c0', // Endometrial
+          '#9966ff', // Pancreatic
+          '#ff9f40'  // Leukemia
         ],
         borderColor: 'rgba(255, 255, 255, 0.2)',
       },
     ],
   };
+  
 
   const bloodCancerData = {
     labels: ['Leukemia', 'Lymphoma', 'Myeloma'],
