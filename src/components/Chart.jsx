@@ -40,12 +40,21 @@ const Chart = () => {
           '#ff9f40'  // Leukemia
         ],
         borderColor: 'rgba(255, 255, 255, 0.2)',
+        datalabels: {
+          display: true,
+          color: '#fff',
+          formatter: (value, context) => {
+            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+            const percentage = Math.round((value / total) * 100) + '%';
+            return percentage;
+          }
+        }
       },
     ],
   };
-
+  
   const bloodCancerData = {
-    labels: ['2021', '2022', '2023', '2024'], // Example years
+    labels: ['2021', '2022', '2023'], // Example years
     datasets: [
       {
         label: 'Estimated New Cases of Leukemia',
