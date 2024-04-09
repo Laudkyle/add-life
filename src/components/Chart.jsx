@@ -67,7 +67,6 @@ const Chart = () => {
       },
     ],
   };
-  
 
   const mortalityRateData = {
     labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
@@ -77,16 +76,17 @@ const Chart = () => {
         data: [170.1, 168.5, 166.4, 163.5, 160.3, 157.5, 154.4, 151.5, 149.0, 146.6, 144.1, 142.7],
         backgroundColor: '#ff6384',
         borderColor: 'rgba(255, 255, 255, 0.2)',
-      },
-      {
+        tension: 0.4, // Set tension to connect points smoothly
+      }, {
         label: 'Blood Cancer Mortality Rate (U.S.)',
         data: [24.5, 24.2, 24.0, 23.7, 23.4, 23.1, 22.9, 22.7, 22.5, 22.2, 22.0, 21.8],
         backgroundColor: '#36a2eb',
         borderColor: 'rgba(255, 255, 255, 0.2)',
+        tension: 0.4, // Set tension to connect points smoothly
       },
     ],
   };
-  
+
 
   const options = {
     responsive: true,
@@ -98,7 +98,7 @@ const Chart = () => {
       <DonutChart
         cancerData={cancerData}
         bloodCancerData={bloodCancerData}
-        survivalRateData={mortalityRateData}
+        mortalityRateData={mortalityRateData}
         options={options}
       />
     </div>
