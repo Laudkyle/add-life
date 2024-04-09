@@ -7,6 +7,7 @@ import Education from '../components/Education';
 import Faq from '../components/Faq';
 import Hope from '../components/Hope';
 import Testimonies from '../components/Testimonies';
+import Chart from '../components/Chart';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
    <Faq />
    <Hope />
    <Testimonies />
+   <Chart />
       
     </div>
   )
