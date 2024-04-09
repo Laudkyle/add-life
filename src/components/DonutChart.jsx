@@ -7,14 +7,17 @@ Chart.register(ArcElement, Legend, Title, Tooltip, CategoryScale, LinearScale, B
 
 const DonutChart = ({ cancerData, bloodCancerData, survivalRateData, options }) => {
   return (
-    <div className="flex justify-center items-center space-x-8">
-      <div className="w-80 h-80">
+    <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+      <div className="w-full md:w-80 h-80">
+        <h2 className="text-center">Cancer Data</h2>
         <Doughnut data={cancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
       </div>
-      <div className="w-80 h-80">
-        <Doughnut data={bloodCancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
+      <div className="w-full md:w-80 h-80">
+        <h2 className="text-center">Blood Cancer Data</h2>
+        <Bar data={bloodCancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
       </div>
-      <div className="w-80 h-80">
+      <div className="w-full md:w-80 h-80">
+        <h2 className="text-center">Survival Rate Data</h2>
         <Bar data={survivalRateData} options={{ ...options, animation: { animateScale: true } }} />
       </div>
     </div>

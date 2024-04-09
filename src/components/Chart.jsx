@@ -45,20 +45,29 @@ const Chart = () => {
   };
 
   const bloodCancerData = {
-    labels: ['Leukemia', 'Lymphoma', 'Myeloma'],
+    labels: ['2021', '2022', '2023', '2024'], // Example years
     datasets: [
       {
-        label: 'Estimated New Cases of Blood Cancers in 2022 (U.S.)',
-        data: [61750, 84960, 34790],
-        backgroundColor: [
-          '#ff6384', // Leukemia
-          '#36a2eb', // Lymphoma
-          '#ffce56', // Myeloma
-        ],
+        label: 'Estimated New Cases of Leukemia',
+        data: [60000, 61750, /* Add data for 2023 and 2024 */],
+        backgroundColor: '#ff6384', // Color for Leukemia
+        borderColor: 'rgba(255, 255, 255, 0.2)',
+      },
+      {
+        label: 'Estimated New Cases of Lymphoma',
+        data: [82000, 84960, /* Add data for 2023 and 2024 */],
+        backgroundColor: '#36a2eb', // Color for Lymphoma
+        borderColor: 'rgba(255, 255, 255, 0.2)',
+      },
+      {
+        label: 'Estimated New Cases of Myeloma',
+        data: [33000, 34790, /* Add data for 2023 and 2024 */],
+        backgroundColor: '#ffce56', // Color for Myeloma
         borderColor: 'rgba(255, 255, 255, 0.2)',
       },
     ],
   };
+  
 
   const survivalRateData = {
     labels: ['5-Year Survival Rate'],
