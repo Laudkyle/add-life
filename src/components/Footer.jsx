@@ -45,7 +45,6 @@ const Footer = () => {
                             <p>Join 1,500+ others and never miss out on our health tips and more</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
