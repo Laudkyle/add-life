@@ -148,11 +148,11 @@ const Hero = () => {
             variants={itemVariants}
           >
             <div className="p-4">
-              <div className="text-3xl font-bold text-[#8e24aa]">90%</div>
+              <div className="text-3xl font-bold text-[#8e24aa]">87%</div>
               <div className="text-gray-600 text-sm">Success Rate</div>
             </div>
             <div className="p-4">
-              <div className="text-3xl font-bold text-[#8e24aa]">10k+</div>
+              <div className="text-3xl font-bold text-[#8e24aa]">78+</div>
               <div className="text-gray-600 text-sm">Lives Touched</div>
             </div>
             <div className="p-4">
@@ -163,22 +163,7 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      {/* <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className="w-6 h-10 border-2 border-[#8e24aa] rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-[#8e24aa] rounded-full mt-2"></div>
-        </div>
-      </motion.div> */}
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./Home";
-import Involved from "./Involved";
+import GetInvolved from "./Involved";
 import Support from "./Support";
 import About from "./About";
 import Events from "./Events" ;
@@ -16,7 +16,7 @@ function Pages() {
     <AnimatePresence>
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
-      <Route path="/involved" element={<Involved />} />
+      <Route path="/involved" element={<GetInvolved />} />
       <Route path="/support" element={<Support />} />
       <Route path="/foundation" element={<Foundation />} />
       <Route path="/events" element={<Events />} />
