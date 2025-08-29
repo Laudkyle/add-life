@@ -1,82 +1,352 @@
-import React, { useEffect, useState } from "react";
-import Heart from "../assets/heart.png";
-import Question from "../assets/question mark.png";
-import Plus from "../assets/plus.png";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import React from "react";
+import { motion } from "framer-motion";
+import { HelpCircle, Heart, Plus, Sparkles, ArrowRight } from "lucide-react";
 
 const Info = () => {
+  const infoCards = [
+    {
+      icon: <HelpCircle className="w-12 h-12" />,
+      title: "Searching for answers?",
+      subtitle: "Ignorance can be deadly.",
+      description: "Start looking here",
+      buttonText: "About Cancer",
+      gradient: "from-purple-500 to-indigo-600",
+      bgPattern: "opacity-10 bg-gradient-to-br from-purple-200 to-indigo-200",
+      hoverGradient: "from-purple-600 to-indigo-700",
+    },
+    {
+      icon: <Heart className="w-12 h-12" />,
+      title: "Support the cause",
+      subtitle: "Life is precious",
+      description: "Save a life",
+      buttonText: "Get Involved",
+      gradient: "from-pink-500 to-rose-600",
+      bgPattern: "opacity-10 bg-gradient-to-br from-pink-200 to-rose-200",
+      hoverGradient: "from-pink-600 to-rose-700",
+    },
+    {
+      icon: <Plus className="w-12 h-12" />,
+      title: "Find help now",
+      subtitle: "Wanna find help?",
+      description: "Search no more",
+      buttonText: "Find Support",
+      gradient: "from-emerald-500 to-teal-600",
+      bgPattern: "opacity-10 bg-gradient-to-br from-emerald-200 to-teal-200",
+      hoverGradient: "from-emerald-600 to-teal-700",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.8
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+        duration: 0.6
+      }
+    }
+  };
+
+  const FloatingElement = ({ children, delay = 0, duration = 4 }) => (
+    <motion.div
+      animate={{
+        y: [0, -15, 0],
+        rotate: [0, 5, -5, 0],
+      }}
+      transition={{
+        duration,
+        delay,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+
   return (
-    <div className="text-white w-full h-screen bg-[#8e24aa] py-10 group">
-      <div className="text-center md:w-full">
-        <h1 className="text-4xl leading-normal mx-auto mb-12">
-          Information & Support
-        </h1>
-        <Splide
-          className="flex justify items-center max-w-5xl mx-auto gap-8"
-          options={{
-            perPage: 3,
-            arrows: false,
-            pagination: false,
-            gap: "2rem",
-            breakpoints: {
-              640: {
-                perPage: 1,
-              },
-              748: {
-                perPage: 2,
-              },
-            },
+    <div className="relative min-h-screen bg-gradient-to-br from-[#8e24aa] via-purple-600 to-purple-800 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.1, 0.2, 0.1],
+            x: [0, 30, 0],
           }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-24 h-24 bg-white/10 rounded-full"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            y: [0, -40, 0],
+            opacity: [0.1, 0.3, 0.1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Section Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <SplideSlide>
-            <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-              <img src={Question} alt="img" className="w-12 h-12" />
-              <h2 className="text-left text-[1.3rem] ">
-                Searching for answers ?
-              </h2>
-              <p className="text-left text-[#555] text-[1.2rem]">
-                Ignorance can be deadly.
-              </p>
-              <p className="text-left mb-12 text-[#555] text-[1.1rem]">
-                Start looking here
-              </p>
-              <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
-                <button>About Cancer</button>
+          <motion.h1 
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 relative inline-block"
+            animate={{
+              textShadow: [
+                "0 0 20px rgba(255,255,255,0.3)",
+                "0 0 40px rgba(255,255,255,0.5)",
+                "0 0 20px rgba(255,255,255,0.3)"
+              ]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Information & Support
+            <motion.div
+              className="absolute -top-2 -right-8"
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <Sparkles className="w-8 h-8 text-white/70" />
+            </motion.div>
+          </motion.h1>
+          <motion.div
+            className="w-32 h-1 bg-white/60 mx-auto rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: 128 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          />
+        </motion.div>
+
+        {/* Cards Container */}
+        <motion.div
+          className="group grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {infoCards.map((card, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="relative group-hover:blur-sm hover:!blur-none group-hover:scale-90 hover:!scale-100 transition-all duration-500 cursor-pointer"
+              whileHover={{ 
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+            >
+              {/* Card Background with Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20" />
+              
+              {/* Main Card */}
+              <div className="relative bg-white rounded-2xl p-6 sm:p-8 h-80 sm:h-96 shadow-2xl border border-gray-100 overflow-hidden">
+                {/* Background Pattern */}
+                <div className={`absolute inset-0 ${card.bgPattern} rounded-2xl`} />
+                
+                {/* Animated border on hover */}
+                <motion.div
+                  className="absolute inset-0 rounded-2xl opacity-0"
+                  style={{
+                    background: `linear-gradient(45deg, transparent 30%, rgba(142, 36, 170, 0.3) 50%, transparent 70%)`,
+                    backgroundSize: '200% 200%'
+                  }}
+                  whileHover={{
+                    opacity: 1,
+                    backgroundPosition: ['0% 0%', '100% 100%'],
+                  }}
+                  transition={{ duration: 0.6 }}
+                />
+
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col">
+                  {/* Icon */}
+                  <FloatingElement delay={index * 0.2}>
+                    <motion.div 
+                      className="text-[#8e24aa] mb-6"
+                      whileHover={{ 
+                        scale: 1.2, 
+                        rotate: 10,
+                        transition: { duration: 0.3 }
+                      }}
+                    >
+                      <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full inline-block shadow-lg">
+                        {card.icon}
+                      </div>
+                    </motion.div>
+                  </FloatingElement>
+
+                  {/* Title */}
+                  <motion.h2 
+                    className="text-left text-xl sm:text-2xl font-bold text-[#8e24aa] mb-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
+                  >
+                    {card.title}
+                  </motion.h2>
+
+                  {/* Subtitle */}
+                  <motion.p 
+                    className="text-left text-gray-600 text-lg sm:text-xl mb-2 font-medium"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
+                  >
+                    {card.subtitle}
+                  </motion.p>
+
+                  {/* Description */}
+                  <motion.p 
+                    className="text-left text-gray-500 text-base sm:text-lg mb-8 flex-grow"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
+                  >
+                    {card.description}
+                  </motion.p>
+
+                  {/* Button */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
+                  >
+                    <motion.button
+                      className={`w-full py-3 px-6 text-white bg-gradient-to-r ${card.gradient} rounded-full font-semibold shadow-lg relative overflow-hidden group/btn`}
+                      whileHover={{ 
+                        scale: 1.05,
+                        boxShadow: "0 10px 30px rgba(142, 36, 170, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <motion.div
+                        className={`absolute inset-0 bg-gradient-to-r ${card.hoverGradient} opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300`}
+                      />
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        {card.buttonText}
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                          <ArrowRight className="w-4 h-4" />
+                        </motion.div>
+                      </span>
+                      
+                      {/* Button shimmer effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                        style={{ transform: 'translateX(-100%)' }}
+                        whileHover={{
+                          transform: 'translateX(100%)',
+                          transition: { duration: 0.6 }
+                        }}
+                      />
+                    </motion.button>
+                  </motion.div>
+                </div>
+
+                {/* Floating decorative elements */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-purple-300 rounded-full"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.3, 0.8, 0.3],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.3
+                  }}
+                />
+                <motion.div
+                  className="absolute bottom-6 left-4 w-1.5 h-1.5 bg-pink-300 rounded-full"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    opacity: [0.4, 0.9, 0.4],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.5 + 1
+                  }}
+                />
               </div>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-              <img src={Heart} alt="img" className="w-12 h-12" />
-              <h2 className="text-left text-[1.3rem] ">Support the cause</h2>
-              <p className="text-left text-[#555] text-[1.2rem]">
-                Life is precious
-              </p>
-              <p className="text-left mb-12 text-[#555] text-[1.1rem]">
-                Save a life
-              </p>
-              <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
-                <button>Get Involved</button>
-              </div>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="bg-white duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-6 rounded-xl text-[#8e24aa] text-2xl w-[300px] h-[320px]">
-              <img src={Plus} alt="img" className="w-12 h-12" />
-              <h2 className="text-left text-[1.3rem] ">Find help now</h2>
-              <p className="text-left text-[#555] text-[1.2rem]">
-                Wanna find help?
-              </p>
-              <p className="text-left mb-12 text-[#555] text-[1.1rem]">
-                Search no more
-              </p>
-              <div className="text-center py-2 text-white bg-[#8e24aa] mx-auto rounded-full">
-                <button>Find support</button>
-              </div>
-            </div>
-          </SplideSlide>
-        </Splide>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Bottom decorative text */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <p className="text-white/70 text-lg">
+            Together, we can make a difference in the fight against cancer
+          </p>
+        </motion.div>
       </div>
     </div>
   );

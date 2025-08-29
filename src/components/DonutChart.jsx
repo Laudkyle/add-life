@@ -1,34 +1,48 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Doughnut, Bar, Line } from 'react-chartjs-2';
-import { Chart, ArcElement, Legend, Title, Tooltip, CategoryScale, LinearScale, BarElement, LineElement, PointElement } from 'chart.js';
+// DonutChart.js
+import React from "react";
+import PropTypes from "prop-types";
+import { Doughnut, Bar, Line } from "react-chartjs-2";
+import {
+  Chart,
+  ArcElement,
+  Legend,
+  Title,
+  Tooltip,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+} from "chart.js";
 
-Chart.register(ArcElement, Legend, Title, Tooltip, CategoryScale, LinearScale, BarElement, LineElement, PointElement);
+Chart.register(
+  ArcElement,
+  Legend,
+  Title,
+  Tooltip,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement
+);
 
-const DonutChart = ({ cancerData, bloodCancerData, mortalityRateData, options }) => {
+const DonutChart = ({ type, data, options, title }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-      <div className="w-full md:w-80 h-80">
-        <h2 className="text-center">Cancer Data</h2>
-        <Doughnut data={cancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
-      </div>
-      <div className="w-full md:w-80 h-80">
-        <h2 className="text-center">Blood Cancer Data</h2>
-        <Bar data={bloodCancerData} options={{ ...options, animation: { animateRotate: true, animateScale: true } }} />
-      </div>
-      <div className="w-full md:w-80 h-80">
-        <h2 className="text-center">Mortality Rate Data</h2>
-        <Line data={mortalityRateData} options={{ ...options, animation: { animateScale: true } }} />
-      </div>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <h2 className="text-center mb-2">{title}</h2>
+      {type === "doughnut" && <Doughnut data={data} options={options} />}
+      {type === "bar" && <Bar data={data} options={options} />}
+      {type === "line" && <Line data={data} options={options} />}
     </div>
   );
 };
 
 DonutChart.propTypes = {
-  cancerData: PropTypes.object.isRequired,
-  bloodCancerData: PropTypes.object.isRequired,
-  mortalityRateData: PropTypes.object.isRequired,
+  type: PropTypes.oneOf(["doughnut", "bar", "line"]).isRequired,
+  data: PropTypes.object.isRequired,
   options: PropTypes.object,
+  title: PropTypes.string,
 };
 
 export default DonutChart;
