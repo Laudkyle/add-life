@@ -9,6 +9,7 @@ import Gallery from "./Gallery";
 import Projects from "./Projects";
 import { Route, Routes,useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import CancerInstitute from "./Cancer";
 
 function Pages() {
     let location = useLocation();
@@ -22,6 +23,7 @@ function Pages() {
       <Route path="/events" element={<Events />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
+      <Route path="/cancer" element={<CancerInstitute />} />
       <Route path="/projects" element={<Projects />} />
     </Routes>
     </AnimatePresence>

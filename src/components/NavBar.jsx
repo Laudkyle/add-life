@@ -20,7 +20,7 @@ const NavBar = () => {
             <NavLink to={"/"}>Home</NavLink>
           </li>
           <li className={"p-2 "}>
-            <NavLink to={"/about"}>Cancer</NavLink>
+            <NavLink to={"/cancer"}>Cancer</NavLink>
           </li>
           <li className={"p-2 "}>
             <NavLink to={"/involved"}>Get Involved</NavLink>
