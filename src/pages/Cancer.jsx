@@ -244,7 +244,64 @@ const CancerInstitute = () => {
             </motion.div>
           </div>
         );
+ case 'research':
+        return (
+          <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl font-bold text-[#8e24aa] mb-6">Research & Clinical Trials</h1>
 
+              <div className="bg-indigo-50 border-l-4 border-indigo-400 p-4 mb-6">
+                <p className="text-indigo-800">
+                  Cancer research drives innovation in prevention, detection, and treatment. 
+                  Clinical trials are critical for evaluating new therapies and improving patient outcomes.
+                </p>
+              </div>
+
+              <div className="grid gap-6">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                  <h3 className="text-2xl font-bold text-[#8e24aa] mb-3">Ongoing Clinical Trials</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• Immunotherapy trials for advanced melanoma</li>
+                    <li>• CAR-T cell therapy studies for leukemia and lymphoma</li>
+                    <li>• Targeted therapies for lung and breast cancers</li>
+                    <li>• Combination therapies (chemo + immunotherapy)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                  <h3 className="text-2xl font-bold text-[#8e24aa] mb-3">How to Participate</h3>
+                  <p className="text-gray-700 mb-3">
+                    Patients and caregivers can find clinical trials through trusted registries. 
+                    Always discuss with your oncologist before enrolling.
+                  </p>
+                  <a
+                    href="https://clinicaltrials.gov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[#8e24aa] font-medium hover:underline"
+                  >
+                    Search Trials at ClinicalTrials.gov
+                  </a>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                  <h3 className="text-2xl font-bold text-[#8e24aa] mb-3">Recent Breakthroughs</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• mRNA cancer vaccines entering Phase II trials</li>
+                    <li>• Liquid biopsy tests for early detection</li>
+                    <li>• AI-driven precision oncology approaches</li>
+                    <li>• Personalized medicine based on genetic profiling</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        );
+        
       case 'common':
         return (
           <div className="space-y-8">
