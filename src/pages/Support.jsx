@@ -29,7 +29,7 @@ const LymphomaSupport = () => {
       icon: <Phone className="w-12 h-12" />,
       title: "Get Immediate Help",
       subtitle: "24/7 Support Available",
-      description: "Dial **939**101# for instant assistance",
+      description: "Dial *939*101# for instant assistance",
       buttonText: "Call Now",
       gradient: "from-emerald-500 to-teal-600",
       bgPattern: "opacity-10 bg-gradient-to-br from-emerald-200 to-teal-200",
@@ -361,7 +361,7 @@ const LymphomaSupport = () => {
             >
               <Phone className="w-8 h-8 text-white mx-auto mb-3" />
               <p className="text-white text-lg mb-2">Quick Access Code</p>
-              <p className="text-white text-3xl font-bold tracking-wider">**939**101#</p>
+              <p className="text-white text-3xl font-bold tracking-wider">*939*101#</p>
               <p className="text-white/80 text-sm mt-2">Dial for immediate support</p>
             </motion.div>
           </motion.div>
