@@ -162,7 +162,9 @@ const Hero = () => {
           </motion.div>
         </div>
       </motion.div>
-
+<img 
+src=""
+/>
       
     </div>
   );
