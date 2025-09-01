@@ -385,10 +385,7 @@ const LymphomaSupport = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Every lymphoma journey is different, but you don't have to walk it alone. 
-            With advances in treatment, support from loved ones, and the strength of 
-            the lymphoma community, there is reason for hope. Together, we face each 
-            day with courage and determination.
+            My lymphoma journey was one of the hardest battles of my life, but I want you to know you don’t have to go through it alone. Treatment can feel overwhelming, but with the support of loved ones and the strength of the lymphoma community, I found the hope to keep moving forward. Today, as a survivor, I stand as proof that there is light ahead. Every day is a chance to face the fight with courage and determination—and you can too.
           </motion.p>
           <motion.h3 
             className='text-center my-4 sm:text-2xl text-xl'
