@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Logo from '../assets/logo.png';
 
 const NavBar = () => {
   const [nav, setNav] = useState(true);
@@ -12,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="w-full flex justify-between items-center h-[96px] bg-transparent p-4">
       <div className="w-[200px] my-2">
-        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src={Logo} alt="logo" />
+        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src='./addlife-logo.png' alt="logo" />
       </div>
       <div className="hidden md:flex p-4 text-[#8E24AA] font-medium">
         <ul className="flex  justify-end items-center">
@@ -52,9 +51,9 @@ const NavBar = () => {
             : "fixed left-0 top-0 w-[250px] bg-white border-r border-r-[#8e24aa]-900 h-screen ease-in-out duration-500"
         }
       >
-        <div className="w-[200px]">
-          <h1 className="text-[#8E24AA] p-4 font-bold text-3xl">LoGo</h1>
-        </div>
+          <div className="w-[200px] my-2">
+        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src='./addlife-logo.png' alt="logo" />
+      </div>
         <div className=" text-[#8E24AA] font-medium z-10">
           <ul className="uppercase p-4 z-1">
             <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
