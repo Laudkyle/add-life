@@ -1,87 +1,61 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineHeart, AiOutlinePicture, AiOutlineTeam, AiOutlineProject } from "react-icons/ai";
+import { FaRibbon, FaHandsHelping, FaRegNewspaper } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [nav, setNav] = useState(true);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
   return (
     <div className="w-full flex justify-between z-50 items-center h-[96px] bg-transparent p-4">
-      <div className="w-[200px] my-2">
-        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src='./addlife-logo.png' alt="logo" />
+      {/* Desktop Logo */}
+      <div className="w-[200px] my-2 hidden md:block">
+        <img
+          className="cursor-pointer"
+          src="./addlife-logo.png"
+          alt="logo"
+        />
       </div>
+
+      {/* Desktop Nav */}
       <div className="hidden md:flex p-4 text-[#8E24AA] font-medium">
-        <ul className="flex  justify-end items-center">
-          <li className={"p-2 "}>
-            <NavLink to={"/"}>Home</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/cancer"}>Cancer</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/involved"}>Get Involved</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/support"}>Lymphoma Support</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/foundation"}>Our Foundation</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/events"}>News & Events</NavLink>
-          </li>
-          <li className={"p-2 "}>
-            <NavLink to={"/projects"}>Projects</NavLink>
-          </li>
-          <li className={"p-2"}>
-            <NavLink to={"/gallery"}>Gallery</NavLink>
-          </li>
+        <ul className="flex justify-end items-center">
+          <li className="p-2"><NavLink to={"/"}>Home</NavLink></li>
+          <li className="p-2"><NavLink to={"/cancer"}>Cancer</NavLink></li>
+          <li className="p-2"><NavLink to={"/involved"}>Get Involved</NavLink></li>
+          <li className="p-2"><NavLink to={"/support"}>Lymphoma Support</NavLink></li>
+          <li className="p-2"><NavLink to={"/foundation"}>Our Foundation</NavLink></li>
+          <li className="p-2"><NavLink to={"/events"}>News & Events</NavLink></li>
+          <li className="p-2"><NavLink to={"/projects"}>Projects</NavLink></li>
+          <li className="p-2"><NavLink to={"/gallery"}>Gallery</NavLink></li>
         </ul>
       </div>
-      <div onClick={handleNav} className="block md:hidden text-[#8e24aa]">
-        {nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
-      </div>
-      <div
-        className={
-          nav
-            ? "fixed left-[-100%] ease-in-out duration-500"
-            : "fixed left-0 top-0 w-[250px] bg-white border-r border-r-[#8e24aa]-900 h-screen ease-in-out duration-500"
-        }
-      >
-          <div className="w-[200px] my-2">
-        <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src='./addlife-logo.png' alt="logo" />
-      </div>
-        <div className=" text-[#8E24AA] font-medium z-10">
-          <ul className="uppercase p-4 z-1">
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/"}>Home</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/about"}>Cancer</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/involved"}>Get Involved</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/support"}>Lymphoma Support</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/foundation"}>Our Foundation</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/events"}>News & Events</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2 border-b border-b-[#8E24AA]"}>
-              <NavLink to={"/projects"}>Projects</NavLink>
-            </li>
-            <li onClick={handleNav} className={"p-2"}>
-              <NavLink to={"/gallery"}>Gallery</NavLink>
-            </li>
-          </ul>
-        </div>
+
+      {/* Mobile Floating Navbar */}
+      <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] bg-white rounded-2xl shadow-lg border border-[#8E24AA] px-4 py-2 flex justify-around items-center z-50">
+        {[
+          { to: "/", icon: <AiOutlineHome size={22} />, label: "Home" },
+          { to: "/cancer", icon: <FaRibbon size={22} />, label: "Cancer" },
+          { to: "/involved", icon: <FaHandsHelping size={22} />, label: "Involved" },
+          { to: "/support", icon: <AiOutlineHeart size={22} />, label: "Support" },
+          { to: "/foundation", icon: <AiOutlineTeam size={22} />, label: "Foundation" },
+          { to: "/events", icon: <FaRegNewspaper size={22} />, label: "Events" },
+          { to: "/projects", icon: <AiOutlineProject size={22} />, label: "Projects" },
+          { to: "/gallery", icon: <AiOutlinePicture size={22} />, label: "Gallery" },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            whileTap={{ scale: 0.85 }}
+            whileHover={{ scale: 1.1 }}
+            className="flex flex-col items-center text-[#8E24AA]"
+          >
+            <NavLink to={item.to}>
+              {item.icon}
+            </NavLink>
+            <span className="text-[10px]">{item.label}</span>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
