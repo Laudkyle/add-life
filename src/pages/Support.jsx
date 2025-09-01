@@ -1,7 +1,15 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { HelpCircle, Heart, Plus, Sparkles, ArrowRight, Phone, Users, BookOpen } from "lucide-react";
+import {
+  HelpCircle,
+  Heart,
+  Plus,
+  Sparkles,
+  ArrowRight,
+  Phone,
+  Users,
+  BookOpen,
+} from "lucide-react";
 
 const LymphomaSupport = () => {
   const supportCards = [
@@ -41,28 +49,28 @@ const LymphomaSupport = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
-      scale: 0.8
+      scale: 0.8,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         type: "spring",
         damping: 20,
         stiffness: 100,
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   const FloatingElement = ({ children, delay = 0, duration = 4 }) => (
@@ -75,7 +83,7 @@ const LymphomaSupport = () => {
         duration,
         delay,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut",
       }}
     >
       {children}
@@ -98,7 +106,7 @@ const LymphomaSupport = () => {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           />
           <motion.div
@@ -111,7 +119,7 @@ const LymphomaSupport = () => {
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           />
           <motion.div
@@ -123,7 +131,7 @@ const LymphomaSupport = () => {
             transition={{
               duration: 15,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             }}
           />
         </div>
@@ -136,19 +144,19 @@ const LymphomaSupport = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 relative inline-block"
               animate={{
                 textShadow: [
                   "0 0 20px rgba(255,255,255,0.3)",
                   "0 0 40px rgba(255,255,255,0.5)",
-                  "0 0 20px rgba(255,255,255,0.3)"
-                ]
+                  "0 0 20px rgba(255,255,255,0.3)",
+                ],
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               Lymphoma Support
@@ -161,7 +169,7 @@ const LymphomaSupport = () => {
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
               >
                 <Sparkles className="w-8 h-8 text-white/70" />
@@ -195,29 +203,31 @@ const LymphomaSupport = () => {
                 key={index}
                 variants={cardVariants}
                 className="relative group-hover:blur-sm hover:!blur-none group-hover:scale-90 hover:!scale-100 transition-all duration-500 cursor-pointer"
-                whileHover={{ 
+                whileHover={{
                   y: -10,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
               >
                 {/* Card Background with Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20" />
-                
+
                 {/* Main Card */}
                 <div className="relative bg-white rounded-2xl p-6 sm:p-8 h-80 sm:h-96 shadow-2xl border border-gray-100 overflow-hidden">
                   {/* Background Pattern */}
-                  <div className={`absolute inset-0 ${card.bgPattern} rounded-2xl`} />
-                  
+                  <div
+                    className={`absolute inset-0 ${card.bgPattern} rounded-2xl`}
+                  />
+
                   {/* Animated border on hover */}
                   <motion.div
                     className="absolute inset-0 rounded-2xl opacity-0"
                     style={{
                       background: `linear-gradient(45deg, transparent 30%, rgba(142, 36, 170, 0.3) 50%, transparent 70%)`,
-                      backgroundSize: '200% 200%'
+                      backgroundSize: "200% 200%",
                     }}
                     whileHover={{
                       opacity: 1,
-                      backgroundPosition: ['0% 0%', '100% 100%'],
+                      backgroundPosition: ["0% 0%", "100% 100%"],
                     }}
                     transition={{ duration: 0.6 }}
                   />
@@ -226,12 +236,12 @@ const LymphomaSupport = () => {
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Icon */}
                     <FloatingElement delay={index * 0.2}>
-                      <motion.div 
+                      <motion.div
                         className="text-[#8e24aa] mb-6"
-                        whileHover={{ 
-                          scale: 1.2, 
+                        whileHover={{
+                          scale: 1.2,
                           rotate: 10,
-                          transition: { duration: 0.3 }
+                          transition: { duration: 0.3 },
                         }}
                       >
                         <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full inline-block shadow-lg">
@@ -241,7 +251,7 @@ const LymphomaSupport = () => {
                     </FloatingElement>
 
                     {/* Title */}
-                    <motion.h2 
+                    <motion.h2
                       className="text-left text-xl sm:text-2xl font-bold text-[#8e24aa] mb-3"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -251,7 +261,7 @@ const LymphomaSupport = () => {
                     </motion.h2>
 
                     {/* Subtitle */}
-                    <motion.p 
+                    <motion.p
                       className="text-left text-gray-600 text-lg sm:text-xl mb-2 font-medium"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -261,7 +271,7 @@ const LymphomaSupport = () => {
                     </motion.p>
 
                     {/* Description */}
-                    <motion.p 
+                    <motion.p
                       className="text-left text-gray-500 text-base sm:text-lg mb-8 flex-grow"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -278,9 +288,9 @@ const LymphomaSupport = () => {
                     >
                       <motion.button
                         className={`w-full py-3 px-6 text-white bg-gradient-to-r ${card.gradient} rounded-full font-semibold shadow-lg relative overflow-hidden group/btn`}
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.05,
-                          boxShadow: "0 10px 30px rgba(142, 36, 170, 0.3)"
+                          boxShadow: "0 10px 30px rgba(142, 36, 170, 0.3)",
                         }}
                         whileTap={{ scale: 0.98 }}
                         transition={{ duration: 0.2 }}
@@ -295,20 +305,20 @@ const LymphomaSupport = () => {
                             transition={{
                               duration: 1.5,
                               repeat: Infinity,
-                              ease: "easeInOut"
+                              ease: "easeInOut",
                             }}
                           >
                             <ArrowRight className="w-4 h-4" />
                           </motion.div>
                         </span>
-                        
+
                         {/* Button shimmer effect */}
                         <motion.div
                           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                          style={{ transform: 'translateX(-100%)' }}
+                          style={{ transform: "translateX(-100%)" }}
                           whileHover={{
-                            transform: 'translateX(100%)',
-                            transition: { duration: 0.6 }
+                            transform: "translateX(100%)",
+                            transition: { duration: 0.6 },
                           }}
                         />
                       </motion.button>
@@ -326,7 +336,7 @@ const LymphomaSupport = () => {
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: index * 0.3
+                      delay: index * 0.3,
                     }}
                   />
                   <motion.div
@@ -339,7 +349,7 @@ const LymphomaSupport = () => {
                       duration: 3,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: index * 0.5 + 1
+                      delay: index * 0.5 + 1,
                     }}
                   />
                 </div>
@@ -361,34 +371,44 @@ const LymphomaSupport = () => {
             >
               <Phone className="w-8 h-8 text-white mx-auto mb-3" />
               <p className="text-white text-lg mb-2">Quick Access Code</p>
-              <p className="text-white text-3xl font-bold tracking-wider">*939*101#</p>
-              <p className="text-white/80 text-sm mt-2">Dial for immediate support</p>
+              <p className="text-white text-3xl font-bold tracking-wider">
+                *939*101#
+              </p>
+              <p className="text-white/80 text-sm mt-2">
+                Dial for immediate support
+              </p>
             </motion.div>
           </motion.div>
         </div>
       </div>
 
       {/* Hope Section */}
-      <div className='w-full h-[50%] my-16 mx-auto'>
-        <div className='text-[rgb(142,36,170)] max-w-[1000px] mx-auto px-4'>
-          <motion.h1 
-            className='text-[#4c1c5c] md:text-5xl sm:text-4xl text-3xl capitalize text-center my-8 font-bold'
+      <div className="w-full h-[50%] my-16 mx-auto">
+        <div className="text-[rgb(142,36,170)] max-w-[1000px] mx-auto px-4">
+          <motion.h1
+            className="text-[#4c1c5c] md:text-5xl sm:text-4xl text-3xl capitalize text-center my-8 font-bold"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             There is hope in lymphoma
           </motion.h1>
-          <motion.p 
-            className='text-center md:text-4xl sm:text-3xl text-2xl leading-relaxed'
+          <motion.p
+            className="text-center md:text-4xl sm:text-3xl text-2xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-        Every lymphoma journey is unique, but no one should have to walk it alone. With advances in treatment, the love of family and friends, and the strength of the lymphoma community, there is always hope. Together, we face each day with courage and determination.If you are willing to fight, we will fight along with you.
+            Every lymphoma journey is unique, but no one should walk it alone.
+            With advances in treatment, the love of family and friends, and the
+            strength of the lymphoma community, there is always hope.
+            <br></br>
+            <strong>
+              If you are willing to fight, we will fight along yourside.
+            </strong>
           </motion.p>
-          <motion.h3 
-            className='text-center my-4 sm:text-2xl text-xl'
+          <motion.h3
+            className="text-center my-4 sm:text-2xl text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -406,22 +426,32 @@ const LymphomaSupport = () => {
         transition={{ duration: 0.8, delay: 0.6 }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#8e24aa] mb-8">Additional Support Resources</h2>
+          <h2 className="text-3xl font-bold text-[#8e24aa] mb-8">
+            Additional Support Resources
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md">
               <Users className="w-8 h-8 text-[#8e24aa] mx-auto mb-3" />
               <h3 className="font-semibold text-lg mb-2">Support Groups</h3>
-              <p className="text-gray-600">Connect with others on similar journeys</p>
+              <p className="text-gray-600">
+                Connect with others on similar journeys
+              </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <HelpCircle className="w-8 h-8 text-[#8e24aa] mx-auto mb-3" />
-              <h3 className="font-semibold text-lg mb-2">Treatment Information</h3>
-              <p className="text-gray-600">Learn about lymphoma treatment options</p>
+              <h3 className="font-semibold text-lg mb-2">
+                Treatment Information
+              </h3>
+              <p className="text-gray-600">
+                Learn about lymphoma treatment options
+              </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <Heart className="w-8 h-8 text-[#8e24aa] mx-auto mb-3" />
               <h3 className="font-semibold text-lg mb-2">Family Support</h3>
-              <p className="text-gray-600">Resources for caregivers and families</p>
+              <p className="text-gray-600">
+                Resources for caregivers and families
+              </p>
             </div>
           </div>
         </div>
