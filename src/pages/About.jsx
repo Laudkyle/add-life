@@ -7,7 +7,7 @@ const About = () => {
     <div className="w-full min-h-screen bg-gray-50 text-gray-800">
       {/* Hero / Intro Section */}
 <section
-  className="w-full relative h-screen text-white flex items-center justify-center px-6 md:px-20 bg-cover bg-center"
+  className="w-full relative h-[45vh] md:h-screen text-white flex items-center justify-center px-6 md:px-20 bg-cover bg-center"
   style={{ backgroundImage: "url('./addlife-about.png')" }}
 >
   {/* Animated Overlay */}
