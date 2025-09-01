@@ -11,15 +11,15 @@ const About = () => {
   style={{ backgroundImage: "url('./addlife-about.png')" }}
 >
   {/* Animated Overlay */}
-  <motion.div
+  {/* <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 0.9 }}
     transition={{ duration: 1 }}
     className="absolute inset-0 bg-gradient-to-r from-[#7e24aa]/20 to-[#bb47bc]/20"
-  ></motion.div>
+  ></motion.div> */}
 
   {/* Content */}
-  <div className="relative z-10 text-center">
+  {/* <div className="relative z-10 text-center">
     <motion.h1
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const About = () => {
     >
       About Us
     </motion.h1>
-  </div>
+  </div> */}
 </section>
 
 
