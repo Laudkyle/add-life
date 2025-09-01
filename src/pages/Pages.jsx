@@ -19,10 +19,9 @@ function Pages() {
       <Route path="/" element={<Home />} />
       <Route path="/involved" element={<GetInvolved />} />
       <Route path="/support" element={<Support />} />
-      <Route path="/foundation" element={<Foundation />} />
       <Route path="/events" element={<Events />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/foundation" element={<About />} />
       <Route path="/cancer" element={<CancerInstitute />} />
       <Route path="/projects" element={<Projects />} />
     </Routes>

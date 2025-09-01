@@ -8,7 +8,7 @@ function About() {
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}>
-        
+        <img src="./addlife-about.png" alt="Hero-Image" className='object-cover object-center w-full h-full' />
     </motion.div>
   )
 }
