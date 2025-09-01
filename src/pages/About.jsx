@@ -15,7 +15,7 @@ const About = () => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 0.9 }}
     transition={{ duration: 1 }}
-    className="absolute inset-0 bg-gradient-to-r from-[#6e24aa]/20 to-[#ab47bc]/20"
+    className="absolute inset-0 bg-gradient-to-r from-[#7e24aa]/20 to-[#bb47bc]/20"
   ></motion.div>
 
   {/* Content */}
