@@ -106,7 +106,7 @@ const About = () => {
             className="bg-white rounded-2xl shadow-lg p-8"
           >
             <img
-              src="/betty.jpeg" // replace with actual photo
+              src="/betty.jpeg" 
               alt="Betty Smith Afful"
               className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-[#8e24aa] mb-4"
             />
@@ -126,7 +126,7 @@ const About = () => {
             className="bg-white rounded-2xl shadow-lg p-8"
           >
             <img
-              src="/benjamin.jpg" // replace with actual photo
+              src="/benjamin.jpg" 
               alt="Benjamin Smith Afful"
               className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-[#8e24aa] mb-4"
             />
