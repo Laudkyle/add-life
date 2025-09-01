@@ -9,7 +9,7 @@ const NavBar = () => {
     setNav(!nav);
   };
   return (
-    <div className="w-full flex justify-between items-center h-[96px] bg-transparent p-4">
+    <div className="w-full flex justify-between z-50 items-center h-[96px] bg-transparent p-4">
       <div className="w-[200px] my-2">
         <img className="text-[#8E24AA] font-bold text-3xl cursor-pointer" src='./addlife-logo.png' alt="logo" />
       </div>
