@@ -7,7 +7,7 @@ const About = () => {
     <div className="w-full min-h-screen bg-gray-50 text-gray-800">
       {/* Hero / Intro Section */}
 <section
-  className="w-full relative h-[45vh] md:h-screen text-white flex items-center justify-center px-6 md:px-20 bg-cover bg-center"
+  className="w-full relative h-[45vh] md:h-[85vh] text-[#7e24aa] flex items-end justify-center px-6 md:px-20 bg-cover bg-center"
   style={{ backgroundImage: "url('./addlife-about.png')" }}
 >
   {/* Animated Overlay */}
@@ -15,7 +15,7 @@ const About = () => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 0.9 }}
     transition={{ duration: 1 }}
-    className="absolute inset-0 bg-gradient-to-r from-[#6e24aa]/40 to-[#ab47bc]/40"
+    className="absolute inset-0 bg-gradient-to-r from-[#6e24aa]/20 to-[#ab47bc]/20"
   ></motion.div>
 
   {/* Content */}
@@ -24,34 +24,10 @@ const About = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="text-4xl md:text-6xl font-bold mb-6"
+      className="text-5xl md:text-7xl font-bold mb-6"
     >
       About Us
     </motion.h1>
-
-    <motion.p
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-      className="max-w-3xl mx-auto text-lg md:text-xl"
-    >
-      <span className="font-semibold">ADD LIFE TO YEARS Foundation</span>{" "}
-      is committed to bringing hope, awareness, and compassionate support
-      to individuals and families affected by cancer. We believe no one
-      should walk this journey alone.
-    </motion.p>
-
-    {/* Optional: Call to Action Button */}
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.8 }}
-      className="mt-10 px-8 py-3 bg-white text-[#6e24aa] font-semibold rounded-full shadow-lg hover:bg-gray-100"
-    >
-      Learn More
-    </motion.button>
   </div>
 </section>
 
